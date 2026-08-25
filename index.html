@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orphera - Rhythm Game Tools & Open Source</title>
+  
+  <meta name="description" content="Orphera는 DJMAX RESPECT V를 중심으로 리듬게임 유저의 플레이 경험을 개선하는 오픈소스 도구를 개발합니다.">
+  <meta name="theme-color" content="#0d1117">
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span>Orphera</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#values" class="nav-link">Values</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://github.com/orphera" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 5px 10px; font-size: 0.82rem;">
+          GitHub ↗
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badges">
+        <span class="badge badge-rust">Rust</span>
+        <span class="badge badge-game">DJMAX RESPECT V</span>
+      </div>
+
+      <h1 class="hero-title">
+        Hi, we are Orphera 👋
+      </h1>
+
+      <p class="hero-desc">
+        <strong>Orphera</strong>는 <em>DJMAX RESPECT V</em>를 중심으로 다양한 리듬게임 유저의 플레이 경험을 개선하고, 
+        유용한 오픈소스 도구와 데이터 솔루션을 개발하는 프로젝트 팀입니다.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary btn-lg">
+          프로젝트 둘러보기 ↓
+        </a>
+        <a href="https://github.com/orphera" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+          GitHub Profile ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">🚀 Projects</h2>
+
+      <!-- Project 1: Overmax -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">
+            <span>Overmax</span>
+            <span class="badge" style="color: var(--accent); border-color: rgba(255, 209, 102, 0.4);">Overlay App</span>
+          </div>
+          <div class="project-tags">
+            <span class="badge badge-rust">Rust</span>
+            <span class="badge">Pure CV</span>
+            <span class="badge">Windows / Linux</span>
+          </div>
+        </div>
+
+        <p class="project-desc">
+          <em>DJMAX RESPECT V</em> 전용 Rust 네이티브 오버레이 도구입니다.<br>
+          선곡 화면 실시간 패턴 인식, V-Archive 연동, 비공식 난이도 추천 및 기록 간편 업로드 기능을 제공합니다.
+        </p>
+
+        <div class="project-actions">
+          <a href="./overmax/" class="btn btn-primary">
+            소개 및 다운로드 →
+          </a>
+          <a href="./overmax/guide.html" class="btn btn-outline">
+            사용 가이드 📖
+          </a>
+          <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2: ShadowMAX -->
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">
+            <span>ShadowMAX</span>
+            <span class="badge" style="color: var(--accent-cyan); border-color: rgba(56, 217, 169, 0.4);">Web Practice Tool</span>
+          </div>
+          <div class="project-tags">
+            <span class="badge">Static Web</span>
+            <span class="badge">YouTube API</span>
+            <span class="badge">60 FPS Waterfall</span>
+          </div>
+        </div>
+
+        <p class="project-desc">
+          <em>DJMAX RESPECT V</em> 및 리듬게임 연습을 위한 순수 정적 웹(Pure Static Web) 연습 도구입니다.<br>
+          YouTube 영상 연동 미세 속도 조절, 원작 고증 기어 및 60 FPS 키뷰어 워터폴 노트 스트림을 제공합니다.
+        </p>
+
+        <div class="project-actions">
+          <a href="https://orphera.github.io/shadowmax/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            웹 앱 실행하기 ↗
+          </a>
+          <a href="https://github.com/orphera/shadowmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            GitHub 저장소 ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What We Value -->
+  <section id="values" class="section">
+    <div class="container">
+      <h2 class="section-title">🛠️ What We Value</h2>
+
+      <div class="values-grid">
+        <div class="value-item">
+          <h4>⚡ Performance & Safety</h4>
+          <p>인게임 프레임과 판정에 영향이 없도록 리소스 사용량을 최소화한 경량 네이티브 앱을 지향합니다.</p>
+        </div>
+
+        <div class="value-item">
+          <h4>🤝 Community-Driven</h4>
+          <p>비공식 난이도 데이터 및 커뮤니티 생태계와 상생하며, 유저들에게 실제로 필요한 기능을 만듭니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Feedback -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">📬 Contact & Feedback</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 16px;">
+        버그 제보나 기능 제안은 각 프로젝트의 GitHub Issues 탭을 이용해 주세요.
+      </p>
+
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="https://github.com/orphera/overmax/issues" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Overmax Issues ↗
+        </a>
+        <a href="https://github.com/orphera/shadowmax/issues" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          ShadowMAX Issues ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://github.com/orphera" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="./overmax/">Overmax</a>
+        <span>•</span>
+        <a href="./overmax/guide.html">사용 가이드</a>
+        <span>•</span>
+        <a href="https://orphera.github.io/shadowmax/" target="_blank" rel="noopener noreferrer">ShadowMAX</a>
+      </div>
+      <p>
+        © Orphera. All open source tools are built for the rhythm game community.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

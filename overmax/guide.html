@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overmax 사용 가이드 - DJMAX RESPECT V 오버레이</title>
+  
+  <meta name="description" content="Overmax 설치, 게임 화면 설정, V-Archive 연동, 라이트 모드 및 트러블슈팅 가이드입니다.">
+  <meta name="theme-color" content="#0d1117">
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="../" class="nav-link" style="font-size: 0.88rem; color: var(--text-muted);">
+          ← Orphera
+        </a>
+        <span style="color: var(--border);">|</span>
+        <a href="./" class="logo">
+          <span>Overmax</span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="./" class="nav-link">소개</a>
+        <a href="#setup" class="nav-link">설정 팁</a>
+        <a href="#features" class="nav-link">기능 설명</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="./#download" class="btn btn-primary" style="padding: 5px 12px; font-size: 0.82rem;">
+          다운로드
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 30px; padding-bottom: 60px;">
+    
+    <!-- Guide Title -->
+    <div class="guide-header">
+      <h1 class="guide-title">Overmax 사용 가이드</h1>
+      <p class="guide-desc">
+        Overmax의 설치부터 게임 화면 설정, 주요 기능 및 V-Archive 연동까지 상세한 사용법을 안내합니다.
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="guide-toc">
+      <h4>목차</h4>
+      <ul>
+        <li><a href="#install">1. 설치 및 빠른 시작</a></li>
+        <li><a href="#display-settings">2. ⚠️ 게임 화면 설정 (필독)</a></li>
+        <li><a href="#hud-guide">3. 오버레이 화면 보는 법</a></li>
+        <li><a href="#custom-settings">4. 설정 및 커스터마이징</a></li>
+        <li><a href="#varchive-sync">5. V-Archive 연동 & 신기록 업로드</a></li>
+        <li><a href="#faq">6. 자주 묻는 질문 (FAQ)</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Install -->
+    <section id="install" class="guide-section">
+      <h2>1. 설치 및 빠른 시작</h2>
+      <p>Overmax는 별도의 무거운 인스톨러 없이 바로 실행 가능한 포터블(Portable) 단일 패키지로 제공됩니다.</p>
+      
+      <ol>
+        <li><a href="./#download" style="color: var(--accent-blue);">다운로드 페이지</a>에서 최신 <code>overmax.zip</code>을 다운로드합니다.</li>
+        <li>원하는 폴더에 압축을 풉니다.</li>
+        <li><code>overmax.exe</code>를 실행합니다.</li>
+        <li>DJMAX RESPECT V를 실행하면 자동으로 게임 창을 인식하여 오버레이가 뜹니다.</li>
+      </ol>
+
+      <p style="font-size: 0.88rem; color: var(--text-muted);">
+        💡 <strong>자동 업데이트</strong>: 앱 실행 시 자동으로 최신 곡 DB(<code>image_index.db</code>) 및 최신 버전 여부를 확인하여 백그라운드에서 동기화합니다.
+      </p>
+    </section>
+
+    <!-- Section 2: Display Settings -->
+    <section id="display-settings" class="guide-section">
+      <h2>2. ⚠️ 게임 화면 설정 (필독)</h2>
+      <p>게임 안티치트(XIGNCODE3) 및 Windows OS의 렌더링 제약으로 인해 아래 설정을 반드시 확인해 주세요.</p>
+
+      <div class="notice-box" style="margin-bottom: 16px;">
+        <strong>권장 설정: 전체 창 모드 (Borderless Fullscreen)</strong><br>
+        게임 내 [OPTION] → [GRAPHICS] → 화면 모드를 <strong>"전체 창 모드"</strong>로 설정해 주세요. 게임 화면 위에 오버레이가 가려지지 않고 정상적으로 오버랩됩니다.
+      </div>
+
+      <h3>독점 전체화면을 사용해야 하는 경우</h3>
+      <p>
+        게임을 일반 "전체화면(Fullscreen)"으로 실행하면 오버레이가 게임 창 뒤로 숨겨지게 됩니다. 
+        독점 전체화면을 반드시 사용하셔야 하는 환경이라면 오버레이 창을 드래그하여 <strong>듀얼 모니터의 보조 화면</strong>에 두고 플레이하시면 됩니다.
+      </p>
+    </section>
+
+    <!-- Section 3: HUD Guide -->
+    <section id="hud-guide" class="guide-section">
+      <h2>3. 오버레이 화면 보는 법</h2>
+      
+      <h3>1) 상단 헤더</h3>
+      <ul>
+        <li><strong>현재 곡명 및 아티스트</strong>: 선곡 화면에서 선택 중인 곡의 정보를 표시합니다.</li>
+        <li><strong>버튼 모드 (4B / 5B / 6B / 8B)</strong>: 현재 선택된 버튼 모드를 자동 감지합니다.</li>
+        <li><strong>실시간 판정 Rate</strong>: 플레이 중 또는 결과 화면에서 감지된 최고 기록입니다.</li>
+        <li><strong>⬆ 업로드 버튼</strong>: 기존 V-Archive 기록보다 높은 신기록이 감지되면 활성화되며, 누르면 즉시 동기화됩니다.</li>
+      </ul>
+
+      <h3>2) 비공식 난이도 티어표</h3>
+      <p>
+        V-Archive 데이터를 바탕으로 각 난이도(NM / HD / MX / SC)의 세분화된 비공식 난이도 수치(예: <code>14.2</code>)를 보여줍니다. 현재 선택된 패턴은 강조 표시됩니다.
+      </p>
+
+      <h3>3) 유사 난이도 스마트 추천 리스트</h3>
+      <p>
+        현재 선택한 패턴과 난이도가 비슷한 다른 패턴들을 자동으로 추천합니다. 
+        정렬 알고리즘은 <strong>[달성 Rate가 낮은 순 → 미플레이 곡 순]</strong>으로 구성되어 실력 향상과 기록 갱신에 최적화되어 있습니다.
+      </p>
+    </section>
+
+    <!-- Section 4: Custom Settings -->
+    <section id="custom-settings" class="guide-section">
+      <h2>4. 설정 및 커스터마이징 (⚙)</h2>
+      <p>오버레이 헤더의 <strong>톱니바퀴 버튼(⚙)</strong>을 누르면 설정 창이 열립니다.</p>
+
+      <ul>
+        <li><strong>크기 조절 (S / M / L / XL)</strong>: 모니터 해상도(FHD, QHD, 4K 등)에 맞춰 4단계 크기로 조절할 수 있습니다.</li>
+        <li><strong>투명도 조절</strong>: 슬라이더를 통해 인게임 시야에 방해되지 않도록 배경 투명도를 조절합니다.</li>
+        <li><strong>다국어 지원 (i18n)</strong>: 한국어, English, 日本語 3개 국어를 지원합니다.</li>
+        <li><strong>창 드래그 및 위치 기억</strong>: 오버레이를 마우스로 드래그하여 원하는 위치에 놓으면 위치가 자동으로 저장됩니다.</li>
+      </ul>
+
+      <h3>🪶 라이트 모드 (Lite Mode)</h3>
+      <p>
+        추천 리스트 등 부가 요소를 숨기고 필수 정보만 보여주는 <strong>약 60px 높이의 초슬림 바</strong> 레이아웃입니다.
+        라이트 모드에서는 화면 4개 모서리(좌상단, 우상단, 좌하단, 우하단) 중 원하는 위치로 흔들림 없이(Jitter-free) 자동 스냅 고정되어 플레이 중 의도치 않은 마우스 드래그를 방지합니다.
+      </p>
+    </section>
+
+    <!-- Section 5: V-Archive Sync -->
+    <section id="varchive-sync" class="guide-section">
+      <h2>5. V-Archive 연동 & 신기록 업로드</h2>
+      <p>
+        Overmax는 복잡한 API 토큰 없이, 사용 목적에 따라 아래 <strong>두 가지 방식</strong>으로 간편하게 연동하여 사용할 수 있습니다.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
+        <!-- Case 1: Fetch Only -->
+        <div class="feature-item" style="border-left: 3px solid var(--accent-blue);">
+          <h3 style="margin-top: 0; color: var(--accent-blue); font-size: 1.05rem;">
+            경우 1. 내 플레이 기록만 불러오고 싶은 경우 (조회 전용)
+          </h3>
+          <p style="font-size: 0.9rem; margin-bottom: 10px;">
+            V-Archive에 등록된 본인의 플레이 기록과 비공식 난이도를 오버레이에 띄워두고 참고하며 플레이하는 방법입니다.
+          </p>
+          <ol style="margin-bottom: 0;">
+            <li>오버레이 헤더의 <strong>설정 버튼(⚙)</strong>을 누르고 [V-Archive] 탭으로 이동합니다.</li>
+            <li>본인의 <strong>V-Archive ID(닉네임)</strong>를 입력합니다.</li>
+            <li><strong>[새로고침]</strong> 버튼을 누르면 V-Archive의 플레이 기록을 즉시 가져옵니다.</li>
+            <li>이후에는 Overmax가 실행될 때마다 자동으로 최신 V-Archive 기록을 가져와 오버레이에 반영합니다.</li>
+          </ol>
+        </div>
+
+        <!-- Case 2: Fetch & Upload -->
+        <div class="feature-item" style="border-left: 3px solid var(--accent);">
+          <h3 style="margin-top: 0; color: var(--accent); font-size: 1.05rem;">
+            경우 2. 플레이 중 신기록을 V-Archive에 업로드하고 싶은 경우
+          </h3>
+          <p style="font-size: 0.9rem; margin-bottom: 10px;">
+            게임 내에서 실시간으로 갱신한 신기록을 원클릭으로 V-Archive에 직접 등록하는 방법입니다.
+          </p>
+          <ol style="margin-bottom: 12px;">
+            <li>설정 창(⚙)에서 본인의 <strong>V-Archive ID(닉네임)</strong>를 입력하여 연동합니다.</li>
+            <li>V-Archive 클라이언트 프로그램에서 사용되는 <strong><code>account.txt</code> 파일 경로</strong>를 설정 창에 지정해 줍니다.</li>
+          </ol>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px;">
+            💡 <strong>업로드 방법 (2가지 지원)</strong>:
+          </p>
+          <ul style="margin-bottom: 0;">
+            <li><strong>원클릭 실시간 업로드</strong>: 플레이 중 기존 V-Archive 기록을 갱신하면 오버레이 우측 상단에 <strong>⬆ 업로드 버튼</strong>이 활성화됩니다. 이 버튼을 누르면 방금 플레이한 기록이 즉시 업로드됩니다.</li>
+            <li><strong>V-Archive 동기화 창 이용</strong>: 별도의 동기화 창을 열어 오버레이가 수집해 둔 여러 기록들을 검토하고 한 번에 업로드할 수 있습니다.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: FAQ -->
+    <section id="faq" class="guide-section">
+      <h2>6. 자주 묻는 질문 (FAQ)</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 화면 인식이 전혀 동작하지 않아요.</div>
+        <div class="faq-a">
+          DJMAX RESPECT V가 정상 실행 중인지 확인하고, 게임 화면 설정이 "전체 창 모드" 또는 "창 모드"인지 확인해 주세요. 
+          관리자 권한 문제나 특수 그래픽 오버레이 도구와의 충돌 여부도 점검해 보세요.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 메모리 변조나 인젝션으로 인한 제재 위험은 없나요?</div>
+        <div class="faq-a">
+          Overmax는 게임 프로세스의 메모리를 읽거나 변조하지 않으며, 오직 Win32 창 캡처 API만을 사용하여 화면 이미지를 인식하므로 안전합니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. Linux에서도 사용할 수 있나요?</div>
+        <div class="faq-a">
+          네, x86_64 Linux 환경(Proton / XWayland)을 위한 배포 패키지(<code>overmax-linux-x86_64.tar.gz</code>)를 제공합니다. 
+          자세한 실행 가이드는 GitHub의 Linux 가이드 문서를 참고해 주세요.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../">Orphera Team</a>
+        <span>•</span>
+        <a href="./">Overmax 소개</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://v-archive.net" target="_blank" rel="noopener noreferrer">V-Archive</a>
+      </div>
+      <p>
+        Overmax is an open-source fan tool created by orphera. DJMAX RESPECT V is a trademark of NEOWIZ.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
