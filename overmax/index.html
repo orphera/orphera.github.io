@@ -30,11 +30,11 @@
   <!-- Header -->
   <header class="header">
     <div class="container header-inner">
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <a href="../" class="nav-link" style="font-size: 0.88rem; color: var(--text-muted);">
+      <div class="header-brand">
+        <a href="../" class="header-back">
           ← Orphera
         </a>
-        <span style="color: var(--border);">|</span>
+        <span class="header-divider">|</span>
         <a href="#" class="logo">
           <span>Overmax</span>
           <span class="logo-badge js-latest-version">v0.9.x</span>
@@ -60,7 +60,7 @@
         실시간 비공식 난이도 오버레이
       </h1>
       <p class="hero-desc">
-        선곡 화면을 실시간으로 인식하여 V-Archive 비공식 난이도와 맞춤형 추천을 제공합니다.<br>
+        선곡 화면을 실시간으로 인식하여 V-Archive 비공식 난이도와 맞춤형 추천을 제공합니다.<br class="break-desktop">
         메모리 변조 없이 순수 화면 캡처와 Rust 기반의 초경량 성능으로 동작합니다.
       </p>
 
@@ -130,7 +130,7 @@
   <!-- Quick Guide -->
   <section id="guide" class="section">
     <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 8px;">
         <h2 class="section-title" style="margin-bottom: 0;">빠른 시작</h2>
         <a href="guide.html" style="font-size: 0.9rem; color: var(--accent-blue);">상세 가이드 전체보기 →</a>
       </div>
