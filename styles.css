@@ -926,6 +926,10 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .nav-link-desktop {
+    display: none !important;
+  }
+
   .download-card {
     flex-direction: column;
     text-align: center;
@@ -1140,6 +1144,10 @@ a {
 
   .nav-link {
     font-size: 0.8rem;
+  }
+
+  .nav-link-tablet {
+    display: none !important;
   }
 
   .header .btn {
