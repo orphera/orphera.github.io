@@ -65,15 +65,25 @@
       </p>
 
       <div class="hero-actions">
-        <a href="https://github.com/orphera/overmax/releases/latest/download/overmax.zip" class="btn btn-primary btn-lg js-dl-windows">
+        <a href="https://github.com/orphera/overmax/releases/latest/download/overmax.zip" class="btn btn-primary btn-lg js-dl-windows btn-desktop-only">
           Windows 다운로드 (.zip)
         </a>
-        <a href="guide.html" class="btn btn-outline btn-lg">
+        <a href="guide.html" class="btn btn-primary btn-lg mobile-only">
+          사용 가이드 보기 →
+        </a>
+        <a href="guide.html" class="btn btn-outline btn-lg desktop-only">
           사용 가이드 보기
         </a>
+        <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg mobile-only">
+          GitHub ↗
+        </a>
       </div>
-      <div class="hero-meta">
+      <div class="hero-meta desktop-only">
         Windows 10 / 11 (64-bit) & Linux 지원 • 무료 오픈소스 • <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link" style="color: var(--accent-blue); text-decoration: underline;">릴리즈 노트 ↗</a>
+      </div>
+      <div class="mobile-platform-notice">
+        🖥️ Overmax는 PC (Windows / Linux) 전용 오버레이 도구입니다.<br>
+        PC 환경에서 다운로드하여 실행해 주세요.
       </div>
 
       <!-- Main Screenshot Preview Frame -->
@@ -173,13 +183,18 @@
           </p>
         </div>
 
-        <div class="download-buttons">
+        <div class="download-buttons desktop-only">
           <a href="https://github.com/orphera/overmax/releases/latest/download/overmax.zip" class="btn btn-primary btn-lg js-dl-windows">
             Windows (.zip)
           </a>
           <a href="https://github.com/orphera/overmax/releases/latest/download/overmax-linux-x86_64.tar.gz" class="btn btn-outline btn-lg js-dl-linux">
             Linux (.tar.gz)
           </a>
+        </div>
+
+        <div class="mobile-platform-notice" style="margin: 0; width: 100%;">
+          💡 Overmax는 PC (Windows / Linux) 전용 데스크톱 오버레이 도구입니다.<br>
+          PC 브라우저에서 접속하여 다운로드해 주세요.
         </div>
       </div>
     </div>
