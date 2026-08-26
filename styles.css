@@ -258,6 +258,31 @@ a {
   color: var(--accent-blue);
 }
 
+/* In-game HUD Reason Badges (Overmax v0.4.0) */
+.badge-reco {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #ffffff;
+  border: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badge-reco-top  { background: #a06eff; } /* 보라 - Top-50 돌파 */
+.badge-reco-def  { background: #f09628; } /* 골드/오렌지 - Top-50 수성 */
+.badge-reco-up   { background: #32b4ff; } /* 스카이블루 - 상승 모멘텀 */
+.badge-reco-rest { background: #28be82; } /* 에메랄드 - 회복/손풀기 */
+.badge-reco-try  { background: #ff5f5f; } /* 코랄레드 - 재도전 */
+.badge-reco-clr  { background: #1ec8a0; } /* 민트/청록 - 미플레이 첫 클리어 */
+
 .hero-actions {
   display: flex;
   align-items: center;
