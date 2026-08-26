@@ -5,7 +5,7 @@
 const REPO_OWNER = 'orphera';
 const REPO_NAME = 'overmax';
 const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`;
-const FALLBACK_VERSION = 'v0.3.3';
+const FALLBACK_VERSION = 'v0.4.0';
 const FALLBACK_RELEASE_URL = `https://github.com/${REPO_OWNER}/${REPO_NAME}/releases/latest`;
 
 document.addEventListener('DOMContentLoaded', () => {

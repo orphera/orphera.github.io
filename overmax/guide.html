@@ -114,43 +114,81 @@
     <section id="hud-guide" class="guide-section">
       <h2>3. 오버레이 화면 보는 법</h2>
       
-      <h3>1) 상단 헤더</h3>
+      <h3>1) 상단 헤더 및 퀵 액션</h3>
       <ul>
-        <li><strong>현재 곡명 및 아티스트</strong>: 선곡 화면에서 선택 중인 곡의 정보를 표시합니다.</li>
-        <li><strong>버튼 모드 (4B / 5B / 6B / 8B)</strong>: 현재 선택된 버튼 모드를 자동 감지합니다.</li>
-        <li><strong>실시간 판정 Rate</strong>: 플레이 중 또는 결과 화면에서 감지된 최고 기록입니다.</li>
-        <li><strong>⬆ 업로드 버튼</strong>: 기존 V-Archive 기록보다 높은 신기록이 감지되면 활성화되며, 누르면 즉시 동기화됩니다.</li>
+        <li><strong>곡 정보 및 판정</strong>: 현재 선택된 곡명, 아티스트, 버튼 모드(4B/5B/6B/8B), 실시간 최고 달성률(Rate) 및 MAX COMBO(<code>[M]</code>, <code>[P]</code>) 뱃지를 표시합니다.</li>
+        <li><strong>⬆ 원클릭 업로드</strong>: 기존 V-Archive 기록보다 높은 신기록이 감지되면 활성화되며, 누르면 즉시 웹서버로 단독 업로드됩니다.</li>
+        <li><strong>🔄 기록 동기화 (Sync)</strong>: 로컬에 누적된 여러 신기록을 한눈에 검토하고 일괄 업로드/삭제할 수 있는 동기화 창을 엽니다.</li>
+        <li><strong>⚙ 설정</strong>: 크기, 투명도, 스마트 추천 모드, V-Archive 계정 연동 등을 조절하는 설정 창을 엽니다.</li>
       </ul>
 
       <h3>2) 비공식 난이도 티어표</h3>
       <p>
-        V-Archive 데이터를 바탕으로 각 난이도(NM / HD / MX / SC)의 세분화된 비공식 난이도 수치(예: <code>14.2</code>)를 보여줍니다. 현재 선택된 패턴은 강조 표시됩니다.
+        V-Archive 데이터를 바탕으로 각 난이도(NM / HD / MX / SC)의 세분화된 비공식 난이도 수치(예: <code>14.2</code>, <code>14.8</code>)를 보여줍니다. 현재 선택된 패턴은 시각적으로 강조 표시됩니다.
       </p>
 
-      <h3>3) 유사 난이도 스마트 추천 리스트</h3>
+      <h3>3) 지능형 다차원 스마트 추천 리스트 (v0.4.0)</h3>
       <p>
-        현재 선택한 패턴과 난이도가 비슷한 다른 패턴들을 자동으로 추천합니다. 
-        정렬 알고리즘은 <strong>[달성 Rate가 낮은 순 → 미플레이 곡 순]</strong>으로 구성되어 실력 향상과 기록 갱신에 최적화되어 있습니다.
+        단순 오름차순 정렬을 넘어, 플레이어의 실력 분포와 당일 컨디션을 통계적으로 분석하여 실력 향상과 기록 갱신에 가장 효과적인 곡을 똑똑하게 선별합니다.
       </p>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin: 14px 0 20px;">
+        <div style="font-weight: 700; color: var(--text); margin-bottom: 10px; font-size: 0.95rem;">
+          🏷️ 추천 사유 뱃지 안내
+        </div>
+        <ul style="list-style: none; padding-left: 0; margin-bottom: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem;">
+          <li><span class="badge" style="color: #ffd166; border-color: rgba(255, 209, 102, 0.4);">TRY</span> <strong>재도전</strong>: 목표 정확도에 근접했으나 아쉽게 놓치고 최근 14일간 플레이하지 않아 방치된 기록 갱신 유력 곡</li>
+          <li><span class="badge" style="color: #38d9a9; border-color: rgba(56, 217, 169, 0.4);">TOP</span> <strong>Top-50 진입</strong>: V-Archive Top 50 랭킹 컷라인 돌파가 가능한 유력 후보곡 (레이팅 상승 극대화)</li>
+          <li><span class="badge" style="color: #58a6ff; border-color: rgba(88, 166, 255, 0.4);">DEF</span> <strong>Top-50 수성</strong>: 현재 내 41~50위에 위치하여 밀려날 위기에 있는 방어 대상 곡</li>
+          <li><span class="badge" style="color: #ff8c69; border-color: rgba(247, 82, 41, 0.4);">UP</span> <strong>상승 모멘텀</strong>: 오늘 세션의 컨디션(Performance Rating)이 좋아 도전해 볼 만한 상위 난이도 곡</li>
+          <li><span class="badge" style="color: #8b949e; border-color: rgba(139, 148, 158, 0.4);">REST</span> <strong>회복/안정화</strong>: 컨디션이 저조하거나 손풀기가 필요할 때 감각 유지를 위한 안정권 곡</li>
+          <li><span class="badge">NEW</span> <strong>미플레이</strong>: 아직 한 번도 기록이 등록되지 않은 신규 패턴</li>
+        </ul>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 10px; margin-bottom: 0;">
+          💡 각 뱃지에 마우스를 올리면 상세한 추천 이유(호버 툴팁)를 확인할 수 있습니다.
+        </p>
+      </div>
+
+      <h3>4) 하단 푸터 & 권장 난이도 라벨</h3>
+      <ul>
+        <li><strong>🎯 권장 난이도 (예: <code>🎯 권장 SC 13</code>)</strong>: TrueSkill 기반 통계적 실력 분포 모델(<code>SkillProfile</code>)을 통해, 선곡창 커서 위치와 무관하게 플레이어의 현재 실력대에 맞는 안정적인 권장 레벨을 일관되게 고정 표시합니다.</li>
+        <li><strong>대역 평균 달성률 (예: <code>평균 99.12% (14/20)</code>)</strong>: 해당 권장 난이도 대역 내에서 플레이어가 달성한 평균 Rate 및 완주 곡 비율을 실시간으로 집계해 보여줍니다.</li>
+      </ul>
     </section>
 
     <!-- Section 4: Custom Settings -->
     <section id="custom-settings" class="guide-section">
       <h2>4. 설정 및 커스터마이징 (⚙)</h2>
-      <p>오버레이 헤더의 <strong>톱니바퀴 버튼(⚙)</strong>을 누르면 설정 창이 열립니다.</p>
+      <p>오버레이 헤더의 <strong>톱니바퀴 버튼(⚙)</strong>을 누르면 4개 전용 탭으로 구성된 설정 창이 열립니다.</p>
 
-      <ul>
-        <li><strong>크기 조절 (S / M / L / XL)</strong>: 모니터 해상도(FHD, QHD, 4K 등)에 맞춰 4단계 크기로 조절할 수 있습니다.</li>
-        <li><strong>투명도 조절</strong>: 슬라이더를 통해 인게임 시야에 방해되지 않도록 배경 투명도를 조절합니다.</li>
-        <li><strong>다국어 지원 (i18n)</strong>: 한국어, English, 日本語 3개 국어를 지원합니다.</li>
-        <li><strong>창 드래그 및 위치 기억</strong>: 오버레이를 마우스로 드래그하여 원하는 위치에 놓으면 위치가 자동으로 저장됩니다.</li>
-      </ul>
+      <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 14px;">
+        <div class="feature-item">
+          <h4 style="color: var(--text); margin-bottom: 6px;">[일반 탭]</h4>
+          <ul style="margin-bottom: 0; padding-left: 18px;">
+            <li><strong>크기 조절 (S / M / L / XL)</strong>: 모니터 해상도(FHD, QHD, 4K 등)에 맞춰 4단계 스케일로 조절할 수 있습니다.</li>
+            <li><strong>투명도 조절</strong>: 정밀 슬라이더를 통해 인게임 시야에 방해되지 않도록 배경 투명도를 조절합니다.</li>
+            <li><strong>다국어 지원 (i18n)</strong>: 한국어, English, 日本語 3개 국어를 지원합니다.</li>
+            <li><strong>라이트 모드 (Lite Mode)</strong>: 부가 요소를 숨기고 약 60px 초슬림 바로 전환하며, 화면 4개 구석으로 흔들림 없이(Jitter-free) 자동 스냅 고정됩니다.</li>
+          </ul>
+        </div>
 
-      <h3>🪶 라이트 모드 (Lite Mode)</h3>
-      <p>
-        추천 리스트 등 부가 요소를 숨기고 필수 정보만 보여주는 <strong>약 60px 높이의 초슬림 바</strong> 레이아웃입니다.
-        라이트 모드에서는 화면 4개 모서리(좌상단, 우상단, 좌하단, 우하단) 중 원하는 위치로 흔들림 없이(Jitter-free) 자동 스냅 고정되어 플레이 중 의도치 않은 마우스 드래그를 방지합니다.
-      </p>
+        <div class="feature-item">
+          <h4 style="color: var(--text); margin-bottom: 6px;">[추천 탭]</h4>
+          <ul style="margin-bottom: 0; padding-left: 18px;">
+            <li><strong>추천 모드</strong>: 다차원 분석 기반 <code>스마트(Smart)</code> 모드와 단순 달성률 정렬 <code>클래식(Classic)</code> 모드 중 선택할 수 있습니다.</li>
+            <li><strong>목표 정확도 (Target Rate)</strong>: <code>97%</code>, <code>99%(기본)</code>, <code>99.5%</code>, <code>100%</code> 중 본인의 플레이 지향점(클리어 순회 vs 판정 퍼펙트)에 맞춰 권장 난이도 기준을 설정할 수 있습니다.</li>
+            <li><strong>미보유 DLC 제외</strong>: 플레이 기록을 바탕으로 보유한 DLC를 자동 추론하여 미보유 곡 추천을 방지합니다.</li>
+          </ul>
+        </div>
+
+        <div class="feature-item">
+          <h4 style="color: var(--text); margin-bottom: 6px;">[V-Archive 탭 & 고급 탭]</h4>
+          <ul style="margin-bottom: 0; padding-left: 18px;">
+            <li><strong>V-Archive 연동</strong>: 닉네임 조회 연동 및 <code>account.txt</code> 파일 경로 설정을 직관적으로 분리 관리합니다.</li>
+            <li><strong>캡처 백엔드 (고급)</strong>: 기본 자동 모드 외에 <code>GDI</code> 및 고속 <code>DXGI Desktop Duplication</code>을 런타임에 직접 선택할 수 있습니다.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Section 5: V-Archive Sync -->
