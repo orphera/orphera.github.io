@@ -261,6 +261,7 @@
           <ul>
             <li><strong>크기 조절 (S / M / L / XL)</strong>: 모니터 해상도(FHD, QHD, 4K 등)에 맞춰 4단계 스케일로 조절할 수 있습니다.</li>
             <li><strong>투명도 조절</strong>: 정밀 슬라이더를 통해 인게임 시야에 방해되지 않도록 배경 투명도를 조절합니다.</li>
+            <li><strong>위치 스냅</strong>: 화면 4개 모서리(↖ 좌상단, ↗ 우상단, ↙ 좌하단, ↘ 우하단) 중 원하는 위치로 흔들림 없이 자동 고정하거나 수동 드래그할 수 있습니다.</li>
             <li><strong>다국어 지원 (i18n)</strong>: 한국어, English, 日本語 3개 국어를 지원합니다.</li>
           </ul>
         </div>
@@ -286,7 +287,7 @@
           <div class="guide-card-title">🔧 [고급] 탭</div>
           <ul>
             <li><strong>캡처 백엔드</strong>: 기본 자동 모드 외에 <code>GDI</code> 및 고속 <code>DXGI Desktop Duplication</code>을 런타임에 직접 선택할 수 있습니다.</li>
-            <li><strong>오프라인 캐시</strong>: 로컬 데이터베이스를 수동 관리할 수 있습니다.</li>
+            <li><strong>화면 캡처 방지</strong>: 스크린샷 및 방송 캡처 시 오버레이 투명화 여부를 설정할 수 있습니다.</li>
           </ul>
         </div>
       </div>
@@ -294,7 +295,7 @@
       <div class="callout callout-tip" style="margin-top: 10px;">
         <div class="callout-title">🪶 라이트 모드 (Lite Mode) 안내</div>
         추천 리스트 등 부가 요소를 숨기고 필수 정보만 보여주는 <strong>약 60px 높이의 초슬림 바</strong> 레이아웃입니다.<br>
-        라이트 모드에서는 화면 4개 모서리(좌상단, 우상단, 좌하단, 우하단) 중 원하는 위치로 흔들림 없이(Jitter-free) 자동 스냅 고정되어 플레이 중 의도치 않은 마우스 드래그를 방지합니다.
+        일반 오버레이와 라이트 모드 모두 화면 4개 모서리 스냅 고정 및 마우스 드래그를 완벽하게 지원합니다.
       </div>
     </section>
 
@@ -362,6 +363,15 @@
         <div class="faq-a">
           다중 모니터 배치나 디스플레이 가상 좌표 환경에 따라 DXGI 캡처 백엔드가 보조 화면을 놓칠 수 있습니다.<br class="break-desktop">
           오버레이 헤더의 <strong>설정 버튼(⚙) → [고급] 탭</strong>으로 이동한 뒤, <strong>캡처 백엔드를 "GDI"</strong>로 변경해 주시면 모든 모니터 환경에서 가장 안정적으로 동작합니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 스크린샷이나 방송/녹화 프로그램(OBS 등)에서 오버레이가 찍히지 않아요.</div>
+        <div class="faq-a">
+          Overmax는 화면 캡처 시 오버레이 창이 자기 자신을 다시 인식하는 간섭을 방지하기 위해, Windows 화면 캡처 방지(DisplayAffinity) 기능이 기본 활성화되어 있습니다.<br class="break-desktop">
+          스크린샷이나 방송 화면에 오버레이를 포함하고 싶다면 <strong>설정(⚙) → [고급] 탭 → [화면 캡처 방지]</strong> 옵션을 체크 해제(OFF)해 주세요.<br>
+          <span style="color: var(--accent);">⚠️ 주의</span>: 캡처 방지를 끄면 오버레이 창이 게임 UI 인식 영역을 가리는 위치에 놓였을 때 화면 인식이 정상 동작하지 않을 수 있으므로, 오버레이를 인식 영역 바깥이나 보조 모니터로 이동시켜 배치해 주세요.
         </div>
       </div>
 
