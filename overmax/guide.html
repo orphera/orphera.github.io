@@ -281,6 +281,14 @@
       </div>
 
       <div class="faq-item">
+        <div class="faq-q">Q. 듀얼/멀티 모니터 환경에서 오버레이가 정상적으로 뜨지 않거나 인식이 안 돼요.</div>
+        <div class="faq-a">
+          다중 모니터 배치나 디스플레이 가상 좌표 환경에 따라 DXGI 캡처 백엔드가 보조 화면을 놓칠 수 있습니다.<br class="break-desktop">
+          오버레이 헤더의 <strong>설정 버튼(⚙) → [고급] 탭</strong>으로 이동한 뒤, <strong>캡처 백엔드를 "GDI"</strong>로 변경해 주시면 모든 모니터 환경에서 가장 안정적으로 동작합니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
         <div class="faq-q">Q. 메모리 변조나 인젝션으로 인한 제재 위험은 없나요?</div>
         <div class="faq-a">
           Overmax는 게임 프로세스의 메모리를 읽거나 변조하지 않으며, 오직 Win32 창 캡처 API만을 사용하여 화면 이미지를 인식하므로 안전합니다.
