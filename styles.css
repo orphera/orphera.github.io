@@ -263,9 +263,9 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 32px;
-  height: 18px;
-  padding: 0 6px;
+  width: 44px;
+  min-width: 44px;
+  height: 20px;
   border-radius: 3px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -274,6 +274,8 @@ a {
   border: none;
   line-height: 1;
   white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .badge-reco-top  { background: #a06eff; } /* 보라 - Top-50 돌파 */
@@ -282,6 +284,27 @@ a {
 .badge-reco-rest { background: #28be82; } /* 에메랄드 - 회복/손풀기 */
 .badge-reco-try  { background: #ff5f5f; } /* 코랄레드 - 재도전 */
 .badge-reco-clr  { background: #1ec8a0; } /* 민트/청록 - 미플레이 첫 클리어 */
+
+.badge-reco-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.badge-reco-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.badge-reco-desc {
+  flex: 1;
+  line-height: 1.5;
+}
 
 .hero-actions {
   display: flex;
