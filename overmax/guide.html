@@ -57,62 +57,114 @@
     
     <!-- Guide Title -->
     <div class="guide-header">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        <span class="badge badge-rust">공식 사용 가이드</span>
+        <span class="badge" style="color: var(--accent-blue); border-color: rgba(88, 166, 255, 0.4);">Overmax v0.4.0 기준</span>
+      </div>
       <h1 class="guide-title">Overmax 사용 가이드</h1>
       <p class="guide-desc">
-        Overmax의 설치부터 게임 화면 설정, 주요 기능 및 V-Archive 연동까지 상세한 사용법을 안내합니다.
+        Overmax의 설치부터 게임 화면 설정, 오버레이 HUD 활용법, 지능형 다차원 스마트 추천, V-Archive 연동 및 트러블슈팅을 안내합니다.
       </p>
     </div>
 
     <!-- Table of Contents -->
     <div class="guide-toc">
-      <h4>목차</h4>
-      <ul>
-        <li><a href="#install">1. 설치 및 빠른 시작</a></li>
-        <li><a href="#display-settings">2. ⚠️ 게임 화면 설정 (필독)</a></li>
-        <li><a href="#hud-guide">3. 오버레이 화면 보는 법</a></li>
-        <li><a href="#custom-settings">4. 설정 및 커스터마이징</a></li>
-        <li><a href="#varchive-sync">5. V-Archive 연동 & 신기록 업로드</a></li>
-        <li><a href="#faq">6. 자주 묻는 질문 (FAQ)</a></li>
+      <div class="guide-toc-title">
+        <span>📑</span> 목차 바로가기
+      </div>
+      <ul class="guide-toc-list">
+        <li>
+          <a href="#install" class="guide-toc-link">
+            <span class="guide-toc-num">01</span>
+            <span>설치 및 빠른 시작</span>
+          </a>
+        </li>
+        <li>
+          <a href="#display-settings" class="guide-toc-link">
+            <span class="guide-toc-num">02</span>
+            <span>게임 화면 설정 (필독)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#hud-guide" class="guide-toc-link">
+            <span class="guide-toc-num">03</span>
+            <span>오버레이 HUD 화면 보는 법</span>
+          </a>
+        </li>
+        <li>
+          <a href="#custom-settings" class="guide-toc-link">
+            <span class="guide-toc-num">04</span>
+            <span>설정 및 커스터마이징</span>
+          </a>
+        </li>
+        <li>
+          <a href="#varchive-sync" class="guide-toc-link">
+            <span class="guide-toc-num">05</span>
+            <span>V-Archive 연동 & 업로드</span>
+          </a>
+        </li>
+        <li>
+          <a href="#faq" class="guide-toc-link">
+            <span class="guide-toc-num">06</span>
+            <span>자주 묻는 질문 (FAQ)</span>
+          </a>
+        </li>
       </ul>
     </div>
 
     <!-- Section 1: Install -->
     <section id="install" class="guide-section">
-      <h2>1. 설치 및 빠른 시작</h2>
+      <h2><span class="guide-toc-num">01</span> 설치 및 빠른 시작</h2>
       <p>Overmax는 별도의 무거운 인스톨러 없이 바로 실행 가능한 포터블(Portable) 단일 패키지로 제공됩니다.</p>
       
-      <ol>
-        <li><a href="./#download" style="color: var(--accent-blue);">다운로드 페이지</a>에서 최신 <code>overmax.zip</code>을 다운로드합니다.</li>
-        <li>원하는 폴더에 압축을 풉니다.</li>
-        <li><code>overmax.exe</code>를 실행합니다.</li>
-        <li>DJMAX RESPECT V를 실행하면 자동으로 게임 창을 인식하여 오버레이가 뜹니다.</li>
-      </ol>
+      <div class="steps-list" style="margin-top: 18px;">
+        <div class="step-box">
+          <div class="step-num">STEP 01</div>
+          <h4>패키지 다운로드</h4>
+          <p><a href="./#download" style="color: var(--accent-blue); text-decoration: underline;">다운로드 페이지</a>에서 최신 <code>overmax.zip</code>을 다운로드합니다.</p>
+        </div>
 
-      <p style="font-size: 0.88rem; color: var(--text-muted);">
-        💡 <strong>자동 업데이트</strong>: 앱 실행 시 자동으로 최신 곡 DB(<code>image_index.db</code>) 및 최신 버전 여부를 확인하여 백그라운드에서 동기화합니다.
-      </p>
+        <div class="step-box">
+          <div class="step-num">STEP 02</div>
+          <h4>압축 해제 & 실행</h4>
+          <p>원하는 폴더에 압축을 푼 뒤 <code>overmax.exe</code>를 실행합니다.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 03</div>
+          <h4>게임 자동 인식</h4>
+          <p>DJMAX RESPECT V를 실행하면 자동으로 게임 창을 감지하여 오버레이가 뜹니다.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">💡 스마트 자동 업데이트</div>
+        앱 실행 시 최신 곡 데이터베이스(<code>image_index.db</code>) 및 신규 버전 여부를 백그라운드에서 자동 확인하여 항상 최신 메타데이터를 유지합니다.
+      </div>
     </section>
 
     <!-- Section 2: Display Settings -->
     <section id="display-settings" class="guide-section">
-      <h2>2. ⚠️ 게임 화면 설정 (필독)</h2>
-      <p>게임 안티치트(XIGNCODE3) 및 Windows OS의 렌더링 제약으로 인해 아래 설정을 반드시 확인해 주세요.</p>
+      <h2><span class="guide-toc-num">02</span> ⚠️ 게임 화면 설정 (필독)</h2>
+      <p>게임 안티치트(XIGNCODE3) 및 Windows OS의 창 렌더링 제약으로 인해 아래 화면 모드 설정을 반드시 확인해 주세요.</p>
 
-      <div class="notice-box" style="margin-bottom: 16px;">
-        <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">권장 설정: 전체 창 모드 (Borderless Fullscreen)</div>
-        게임 내 [OPTION] → [GRAPHICS] → 화면 모드를 <strong>"전체 창 모드"</strong>로 설정해 주세요. 게임 화면 위에 오버레이가 가려지지 않고 정상적으로 오버랩됩니다.
+      <div class="callout callout-success">
+        <div class="callout-title">✅ 권장 설정: 전체 창 모드 (Borderless Fullscreen)</div>
+        게임 내 <strong>[OPTION] → [GRAPHICS] → 화면 모드를 "전체 창 모드"</strong>로 설정해 주세요. 게임 화면 위에 오버레이가 가려지지 않고 정상적으로 오버랩됩니다.
       </div>
 
-      <h3>독점 전체화면을 사용해야 하는 경우</h3>
-      <p>
-        게임을 일반 "전체화면(Fullscreen)"으로 실행하면 오버레이가 게임 창 뒤로 숨겨지게 됩니다. 
-        독점 전체화면을 반드시 사용하셔야 하는 환경이라면 오버레이 창을 드래그하여 <strong>듀얼 모니터의 보조 화면</strong>에 두고 플레이하시면 됩니다.
-      </p>
+      <div class="guide-card" style="margin-top: 16px;">
+        <div class="guide-card-title">🖥️ 독점 전체화면을 사용해야 하는 경우</div>
+        <p style="margin-bottom: 0;">
+          게임을 일반 "전체화면(Fullscreen)"으로 실행하면 OS 특성상 오버레이가 게임 창 뒤로 숨겨지게 됩니다.<br>
+          독점 전체화면을 반드시 사용하셔야 하는 환경이라면 오버레이 창을 드래그하여 <strong>듀얼 모니터의 보조 화면</strong>에 두고 플레이하시면 됩니다.
+        </p>
+      </div>
     </section>
 
     <!-- Section 3: HUD Guide -->
     <section id="hud-guide" class="guide-section">
-      <h2>3. 오버레이 화면 보는 법</h2>
+      <h2><span class="guide-toc-num">03</span> 오버레이 화면 보는 법</h2>
       
       <h3>1) 상단 헤더 및 퀵 액션</h3>
       <ul>
@@ -124,7 +176,7 @@
 
       <h3>2) 비공식 난이도 티어표</h3>
       <p>
-        V-Archive 데이터를 바탕으로 각 난이도(NM / HD / MX / SC)의 세분화된 비공식 난이도 수치(예: <code>14.2</code>, <code>14.8</code>)를 보여줍니다. 현재 선택된 패턴은 시각적으로 강조 표시됩니다.
+        V-Archive 데이터를 바탕으로 각 난이도(NM / HD / MX / SC)의 세분화된 비공식 난이도 수치(예: <code>14.2</code>, <code>14.8</code>)를 보여줍니다. 현재 선택된 패턴은 시각적으로 밝게 강조 표시됩니다.
       </p>
 
       <h3>3) 지능형 다차원 스마트 추천 리스트 (v0.4.0)</h3>
@@ -132,9 +184,9 @@
         단순 오름차순 정렬을 넘어, 플레이어의 실력 분포와 당일 컨디션을 통계적으로 분석하여 실력 향상과 기록 갱신에 가장 효과적인 곡을 똑똑하게 선별합니다.
       </p>
 
-      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin: 14px 0 20px;">
-        <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 0.95rem;">
-          🏷️ 추천 사유 뱃지 안내
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px 20px; margin: 16px 0 20px;">
+        <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">
+          <span>🏷️</span> 추천 사유 뱃지 안내
         </div>
         <ul class="badge-reco-list">
           <li class="badge-reco-item">
@@ -180,50 +232,75 @@
       </div>
 
       <h3>4) 하단 푸터 & 권장 난이도 라벨</h3>
+      <p>
+        선곡창 커서 위치와 무관하게 플레이어의 실력대에 맞는 안정적인 권장 레벨과 통계를 하단 푸터에 고정 표시합니다.
+      </p>
+
+      <div class="hud-preview-widget">
+        <div class="hud-preview-left">
+          🎯 권장 SC 13
+        </div>
+        <div class="hud-preview-right">
+          평균 99.12% (14/20)
+        </div>
+      </div>
       <ul>
-        <li><strong>🎯 권장 난이도 (예: <code>🎯 권장 SC 13</code>)</strong>: TrueSkill 기반 통계적 실력 분포 모델(<code>SkillProfile</code>)을 통해, 선곡창 커서 위치와 무관하게 플레이어의 현재 실력대에 맞는 안정적인 권장 레벨을 일관되게 고정 표시합니다.</li>
-        <li><strong>대역 평균 달성률 (예: <code>평균 99.12% (14/20)</code>)</strong>: 해당 권장 난이도 대역 내에서 플레이어가 달성한 평균 Rate 및 완주 곡 비율을 실시간으로 집계해 보여줍니다.</li>
+        <li><strong>권장 난이도 (좌측)</strong>: TrueSkill 기반 통계적 실력 분포 모델(<code>SkillProfile</code>)을 통해 산출된 최적 권장 난이도입니다.</li>
+        <li><strong>대역 평균 달성률 (우측)</strong>: 해당 권장 난이도 대역 내에서 플레이어가 달성한 평균 Rate 및 완주 곡 비율을 실시간으로 집계합니다.</li>
       </ul>
     </section>
 
     <!-- Section 4: Custom Settings -->
     <section id="custom-settings" class="guide-section">
-      <h2>4. 설정 및 커스터마이징 (⚙)</h2>
+      <h2><span class="guide-toc-num">04</span> 설정 및 커스터마이징 (⚙)</h2>
       <p>오버레이 헤더의 <strong>톱니바퀴 버튼(⚙)</strong>을 누르면 4개 전용 탭으로 구성된 설정 창이 열립니다.</p>
 
-      <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 14px;">
-        <div class="feature-item">
-          <h4 style="color: var(--text); margin-bottom: 6px;">[일반 탭]</h4>
-          <ul style="margin-bottom: 0; padding-left: 18px;">
+      <div class="guide-cards-grid">
+        <div class="guide-card">
+          <div class="guide-card-title">⚙️ [일반] 탭</div>
+          <ul>
             <li><strong>크기 조절 (S / M / L / XL)</strong>: 모니터 해상도(FHD, QHD, 4K 등)에 맞춰 4단계 스케일로 조절할 수 있습니다.</li>
             <li><strong>투명도 조절</strong>: 정밀 슬라이더를 통해 인게임 시야에 방해되지 않도록 배경 투명도를 조절합니다.</li>
             <li><strong>다국어 지원 (i18n)</strong>: 한국어, English, 日本語 3개 국어를 지원합니다.</li>
-            <li><strong>라이트 모드 (Lite Mode)</strong>: 부가 요소를 숨기고 약 60px 초슬림 바로 전환하며, 화면 4개 구석으로 흔들림 없이(Jitter-free) 자동 스냅 고정됩니다.</li>
           </ul>
         </div>
 
-        <div class="feature-item">
-          <h4 style="color: var(--text); margin-bottom: 6px;">[추천 탭]</h4>
-          <ul style="margin-bottom: 0; padding-left: 18px;">
+        <div class="guide-card">
+          <div class="guide-card-title">🎯 [추천] 탭</div>
+          <ul>
             <li><strong>추천 모드</strong>: 다차원 분석 기반 <code>스마트(Smart)</code> 모드와 단순 달성률 정렬 <code>클래식(Classic)</code> 모드 중 선택할 수 있습니다.</li>
-            <li><strong>목표 정확도 (Target Rate)</strong>: <code>97%</code>, <code>99%(기본)</code>, <code>99.5%</code>, <code>100%</code> 중 본인의 플레이 지향점(클리어 순회 vs 판정 퍼펙트)에 맞춰 권장 난이도 기준을 설정할 수 있습니다.</li>
+            <li><strong>목표 정확도 (Target Rate)</strong>: <code>97%</code>, <code>99%(기본)</code>, <code>99.5%</code>, <code>100%</code> 중 본인의 플레이 지향점에 맞춰 권장 난이도 기준을 설정할 수 있습니다.</li>
             <li><strong>미보유 DLC 제외</strong>: 플레이 기록을 바탕으로 보유한 DLC를 자동 추론하여 미보유 곡 추천을 방지합니다.</li>
           </ul>
         </div>
 
-        <div class="feature-item">
-          <h4 style="color: var(--text); margin-bottom: 6px;">[V-Archive 탭 & 고급 탭]</h4>
-          <ul style="margin-bottom: 0; padding-left: 18px;">
-            <li><strong>V-Archive 연동</strong>: 닉네임 조회 연동 및 <code>account.txt</code> 파일 경로 설정을 직관적으로 분리 관리합니다.</li>
-            <li><strong>캡처 백엔드 (고급)</strong>: 기본 자동 모드 외에 <code>GDI</code> 및 고속 <code>DXGI Desktop Duplication</code>을 런타임에 직접 선택할 수 있습니다.</li>
+        <div class="guide-card">
+          <div class="guide-card-title">☁️ [V-Archive] 탭</div>
+          <ul>
+            <li><strong>V-Archive ID</strong>: 본인의 닉네임을 입력하여 기록을 자동 동기화합니다.</li>
+            <li><strong>account.txt 경로</strong>: V-Archive 클라이언트의 인증 파일을 지정하여 실시간 업로드를 활성화합니다.</li>
           </ul>
         </div>
+
+        <div class="guide-card">
+          <div class="guide-card-title">🔧 [고급] 탭</div>
+          <ul>
+            <li><strong>캡처 백엔드</strong>: 기본 자동 모드 외에 <code>GDI</code> 및 고속 <code>DXGI Desktop Duplication</code>을 런타임에 직접 선택할 수 있습니다.</li>
+            <li><strong>오프라인 캐시</strong>: 로컬 데이터베이스를 수동 관리할 수 있습니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-tip" style="margin-top: 10px;">
+        <div class="callout-title">🪶 라이트 모드 (Lite Mode) 안내</div>
+        추천 리스트 등 부가 요소를 숨기고 필수 정보만 보여주는 <strong>약 60px 높이의 초슬림 바</strong> 레이아웃입니다.<br>
+        라이트 모드에서는 화면 4개 모서리(좌상단, 우상단, 좌하단, 우하단) 중 원하는 위치로 흔들림 없이(Jitter-free) 자동 스냅 고정되어 플레이 중 의도치 않은 마우스 드래그를 방지합니다.
       </div>
     </section>
 
     <!-- Section 5: V-Archive Sync -->
     <section id="varchive-sync" class="guide-section">
-      <h2>5. V-Archive 연동 & 신기록 업로드</h2>
+      <h2><span class="guide-toc-num">05</span> V-Archive 연동 & 신기록 업로드</h2>
       <p>
         Overmax는 복잡한 API 토큰 없이, 사용 목적에 따라 아래 <strong>두 가지 방식</strong>으로 간편하게 연동하여 사용할 수 있습니다.
       </p>
@@ -232,7 +309,7 @@
         <!-- Case 1: Fetch Only -->
         <div class="feature-item" style="border-left: 3px solid var(--accent-blue);">
           <h3 style="margin-top: 0; color: var(--accent-blue); font-size: 1.05rem;">
-            경우 1. 내 플레이 기록만 불러오고 싶은 경우 (조회 전용)
+            📥 경우 1. 내 플레이 기록만 불러오고 싶은 경우 (조회 전용)
           </h3>
           <p style="font-size: 0.9rem; margin-bottom: 10px;">
             V-Archive에 등록된 본인의 플레이 기록과 비공식 난이도를 오버레이에 띄워두고 참고하며 플레이하는 방법입니다.
@@ -248,7 +325,7 @@
         <!-- Case 2: Fetch & Upload -->
         <div class="feature-item" style="border-left: 3px solid var(--accent);">
           <h3 style="margin-top: 0; color: var(--accent); font-size: 1.05rem;">
-            경우 2. 플레이 중 신기록을 V-Archive에 업로드하고 싶은 경우
+            📤 경우 2. 플레이 중 신기록을 V-Archive에 업로드하고 싶은 경우
           </h3>
           <p style="font-size: 0.9rem; margin-bottom: 10px;">
             게임 내에서 실시간으로 갱신한 신기록을 원클릭으로 V-Archive에 직접 등록하는 방법입니다.
@@ -257,20 +334,20 @@
             <li>설정 창(⚙)에서 본인의 <strong>V-Archive ID(닉네임)</strong>를 입력하여 연동합니다.</li>
             <li>V-Archive 클라이언트 프로그램에서 사용되는 <strong><code>account.txt</code> 파일 경로</strong>를 설정 창에 지정해 줍니다.</li>
           </ol>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 6px;">
-            💡 <strong>업로드 방법 (2가지 지원)</strong>:
-          </p>
-          <ul style="margin-bottom: 0;">
-            <li><strong>원클릭 실시간 업로드</strong>: 플레이 중 기존 V-Archive 기록을 갱신하면 오버레이 우측 상단에 <strong>⬆ 업로드 버튼</strong>이 활성화됩니다. 이 버튼을 누르면 방금 플레이한 기록이 즉시 업로드됩니다.</li>
-            <li><strong>V-Archive 동기화 창 이용</strong>: 별도의 동기화 창을 열어 오버레이가 수집해 둔 여러 기록들을 검토하고 한 번에 업로드할 수 있습니다.</li>
-          </ul>
+          <div class="callout callout-warning" style="margin-top: 10px; margin-bottom: 0;">
+            <div class="callout-title">💡 업로드 방법 (2가지 지원)</div>
+            <ul style="margin-bottom: 0; padding-left: 18px;">
+              <li><strong>원클릭 실시간 업로드</strong>: 플레이 중 기존 V-Archive 기록을 갱신하면 오버레이 우측 상단에 <strong>⬆ 업로드 버튼</strong>이 활성화됩니다. 이 버튼을 누르면 방금 플레이한 기록이 즉시 업로드됩니다.</li>
+              <li><strong>V-Archive 동기화 창 이용</strong>: 헤더의 <strong>🔄 동기화 버튼</strong>을 눌러 오버레이가 수집해 둔 여러 기록들을 검토하고 한 번에 일괄 업로드할 수 있습니다.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Section 6: FAQ -->
     <section id="faq" class="guide-section">
-      <h2>6. 자주 묻는 질문 (FAQ)</h2>
+      <h2><span class="guide-toc-num">06</span> 자주 묻는 질문 (FAQ)</h2>
 
       <div class="faq-item">
         <div class="faq-q">Q. 화면 인식이 전혀 동작하지 않아요.</div>
