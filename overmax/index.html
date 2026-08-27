@@ -86,21 +86,54 @@
         PC 환경에서 다운로드하여 실행해 주세요.
       </div>
 
-      <!-- Main Screenshot Preview Frame -->
+      <!-- Main Screenshot Preview Carousel -->
       <div class="hero-media">
         <div class="preview-frame">
           <div class="preview-bar">
-            <div class="dots">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+            <div class="preview-bar-left">
+              <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="preview-title js-preview-title">기본 오버레이 HUD</span>
             </div>
-            <span>Overmax HUD Preview</span>
+            <div class="carousel-tabs">
+              <button type="button" class="carousel-tab-btn active" data-slide="0">기본 HUD</button>
+              <button type="button" class="carousel-tab-btn" data-slide="1">라이트 모드 (좌상단)</button>
+            </div>
           </div>
-          <div class="placeholder-box" data-img="assets/images/hero-preview.jpg" data-alt="Overmax 메인 화면">
-            <div class="placeholder-text">
-              📸 <strong>스크린샷 이미지 위치</strong><br>
-              <code>overmax/assets/images/hero-preview.jpg</code>
+          <div class="carousel-container js-carousel">
+            <div class="carousel-track js-carousel-track">
+              <!-- Slide 1: Standard Mode -->
+              <div class="carousel-slide">
+                <div class="placeholder-box" data-img="assets/images/hero-preview.jpg" data-alt="Overmax 기본 HUD 화면">
+                  <div class="placeholder-text">
+                    📸 <strong>기본 오버레이 HUD (스마트 추천 & 티어표)</strong><br>
+                    <code>overmax/assets/images/hero-preview.jpg</code>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Lite Mode -->
+              <div class="carousel-slide">
+                <div class="placeholder-box" data-img="assets/images/hero-lite-preview.jpg" data-alt="Overmax 라이트 모드 (좌상단 스냅) 화면">
+                  <div class="placeholder-text">
+                    📸 <strong>라이트 모드 (좌상단 스냅 고정)</strong><br>
+                    <code>overmax/assets/images/hero-lite-preview.jpg</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <button type="button" class="carousel-nav-btn carousel-prev js-carousel-prev" aria-label="이전 화면">❮</button>
+            <button type="button" class="carousel-nav-btn carousel-next js-carousel-next" aria-label="다음 화면">❯</button>
+
+            <!-- Pagination Dots -->
+            <div class="carousel-pagination js-carousel-pagination">
+              <span class="carousel-dot active" data-slide="0"></span>
+              <span class="carousel-dot" data-slide="1"></span>
             </div>
           </div>
         </div>
