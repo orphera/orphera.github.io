@@ -12,12 +12,21 @@ function init() {
   initReleaseInfo();
   initImagePlaceholders();
   initCarousel();
+  initLangDropdown();
 }
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
+}
+
+function initLangDropdown() {
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lang-dropdown')) {
+      document.querySelectorAll('.lang-dropdown[open]').forEach(d => d.removeAttribute('open'));
+    }
+  });
 }
 
 async function initReleaseInfo() {

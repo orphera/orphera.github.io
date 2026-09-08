@@ -65,11 +65,27 @@
         <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 5px 10px; font-size: 0.82rem; white-space: nowrap;">
           GitHub ↗
         </a>
-        <div class="lang-switch" aria-label="Language selector">
-          <span class="lang-btn active" aria-current="page">KO</span>
-          <a href="../en/overmax/" class="lang-btn" title="English">EN</a>
-          <a href="../ja/overmax/" class="lang-btn" title="日本語">JA</a>
-        </div>
+        <details class="lang-dropdown" aria-label="Language selector">
+          <summary class="lang-dropdown-btn" title="Language">
+            <span class="lang-globe">🌐</span>
+            <span class="lang-caret">▾</span>
+          </summary>
+          <div class="lang-dropdown-menu">
+            <a href="./" class="lang-dropdown-item active" aria-current="page">
+              <span class="lang-flag">🇰🇷</span>
+              <span class="lang-name">한국어</span>
+              <span class="lang-check">✓</span>
+            </a>
+            <a href="../en/overmax/" class="lang-dropdown-item">
+              <span class="lang-flag">🇺🇸</span>
+              <span class="lang-name">English</span>
+            </a>
+            <a href="../ja/overmax/" class="lang-dropdown-item">
+              <span class="lang-flag">🇯🇵</span>
+              <span class="lang-name">日本語</span>
+            </a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>

@@ -58,11 +58,27 @@
         <a href="https://github.com/orphera" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 5px 10px; font-size: 0.82rem;">
           GitHub ↗
         </a>
-        <div class="lang-switch" aria-label="Language selector">
-          <span class="lang-btn active" aria-current="page">KO</span>
-          <a href="./en/" class="lang-btn" title="English">EN</a>
-          <a href="./ja/" class="lang-btn" title="日本語">JA</a>
-        </div>
+        <details class="lang-dropdown" aria-label="Language selector">
+          <summary class="lang-dropdown-btn" title="Language">
+            <span class="lang-globe">🌐</span>
+            <span class="lang-caret">▾</span>
+          </summary>
+          <div class="lang-dropdown-menu">
+            <a href="./" class="lang-dropdown-item active" aria-current="page">
+              <span class="lang-flag">🇰🇷</span>
+              <span class="lang-name">한국어</span>
+              <span class="lang-check">✓</span>
+            </a>
+            <a href="./en/" class="lang-dropdown-item">
+              <span class="lang-flag">🇺🇸</span>
+              <span class="lang-name">English</span>
+            </a>
+            <a href="./ja/" class="lang-dropdown-item">
+              <span class="lang-flag">🇯🇵</span>
+              <span class="lang-name">日本語</span>
+            </a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -228,5 +244,12 @@
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.lang-dropdown')) {
+        document.querySelectorAll('.lang-dropdown[open]').forEach(d => d.removeAttribute('open'));
+      }
+    });
+  </script>
 </body>
 </html>
