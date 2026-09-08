@@ -66,15 +66,73 @@ body {
   line-height: 1.6;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+/* Korean Typography: keep-all prevents words from splitting mid-syllable */
+:lang(ko),
+html[lang="ko"] {
+  word-break: keep-all;
+}
+
+:lang(ko) h1, :lang(ko) h2, :lang(ko) h3, :lang(ko) h4, :lang(ko) h5, :lang(ko) h6,
+:lang(ko) .hero-title, :lang(ko) .hero-desc,
+:lang(ko) .project-title, :lang(ko) .project-desc,
+:lang(ko) .section-title, :lang(ko) .guide-title, :lang(ko) .guide-desc,
+html[lang="ko"] h1, html[lang="ko"] h2, html[lang="ko"] h3, html[lang="ko"] h4, html[lang="ko"] h5, html[lang="ko"] h6,
+html[lang="ko"] .hero-title, html[lang="ko"] .hero-desc,
+html[lang="ko"] .project-title, html[lang="ko"] .project-desc,
+html[lang="ko"] .section-title, html[lang="ko"] .guide-title, html[lang="ko"] .guide-desc {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6,
-.hero-title, .hero-desc,
-.project-title, .project-desc,
-.section-title, .guide-title, .guide-desc {
-  word-break: keep-all;
+/* Japanese Typography: Japanese does not use spaces between words.
+   'word-break: keep-all' prevents wrapping on long phrases and katakana compounds,
+   which forces flex and grid items to overflow their assigned bounds.
+   Use word-break: normal with strict line breaking and anywhere overflow wrap. */
+:lang(ja),
+html[lang="ja"] {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+:lang(ja) body,
+:lang(ja) h1, :lang(ja) h2, :lang(ja) h3, :lang(ja) h4, :lang(ja) h5, :lang(ja) h6,
+:lang(ja) .hero-title, :lang(ja) .hero-desc,
+:lang(ja) .project-title, :lang(ja) .project-desc,
+:lang(ja) .section-title, :lang(ja) .guide-title, :lang(ja) .guide-desc,
+:lang(ja) p, :lang(ja) span, :lang(ja) div, :lang(ja) li, :lang(ja) a, :lang(ja) button,
+html[lang="ja"] body,
+html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3, html[lang="ja"] h4, html[lang="ja"] h5, html[lang="ja"] h6,
+html[lang="ja"] .hero-title, html[lang="ja"] .hero-desc,
+html[lang="ja"] .project-title, html[lang="ja"] .project-desc,
+html[lang="ja"] .section-title, html[lang="ja"] .guide-title, html[lang="ja"] .guide-desc,
+html[lang="ja"] p, html[lang="ja"] span, html[lang="ja"] div, html[lang="ja"] li, html[lang="ja"] a, html[lang="ja"] button {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+/* English / General Latin Typography */
+:lang(en),
+html[lang="en"] {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+:lang(en) body,
+:lang(en) h1, :lang(en) h2, :lang(en) h3, :lang(en) h4, :lang(en) h5, :lang(en) h6,
+:lang(en) .hero-title, :lang(en) .hero-desc,
+:lang(en) .project-title, :lang(en) .project-desc,
+:lang(en) .section-title, :lang(en) .guide-title, :lang(en) .guide-desc,
+html[lang="en"] body,
+html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3, html[lang="en"] h4, html[lang="en"] h5, html[lang="en"] h6,
+html[lang="en"] .hero-title, html[lang="en"] .hero-desc,
+html[lang="en"] .project-title, html[lang="en"] .project-desc,
+html[lang="en"] .section-title, html[lang="en"] .guide-title, html[lang="en"] .guide-desc {
+  word-break: normal;
   overflow-wrap: break-word;
 }
 
@@ -681,7 +739,7 @@ a {
 /* Values Grid */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -690,6 +748,8 @@ a {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 20px;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .value-item h4 {
@@ -697,18 +757,20 @@ a {
   font-weight: 700;
   margin-bottom: 6px;
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 
 .value-item p {
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 /* Feature Grid (Overmax Page) */
 .features-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -717,6 +779,8 @@ a {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 20px;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .feature-icon {
@@ -728,18 +792,20 @@ a {
   font-size: 1.02rem;
   font-weight: 700;
   margin-bottom: 6px;
+  overflow-wrap: anywhere;
 }
 
 .feature-item p {
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 /* Guide (Overmax Page) */
 .steps-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -749,6 +815,8 @@ a {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 18px;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .step-num {
@@ -825,7 +893,7 @@ a {
 .guide-toc-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   padding-left: 0;
   margin-bottom: 0;
@@ -844,6 +912,8 @@ a {
   color: var(--text-secondary);
   transition: all 0.15s ease;
   text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .guide-toc-link:hover {
@@ -1002,7 +1072,7 @@ a {
 /* Guide Cards Grids */
 .guide-cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin: 16px 0 24px;
 }
@@ -1012,6 +1082,8 @@ a {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 18px 20px;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .guide-card-title {
@@ -1068,15 +1140,21 @@ a {
   gap: 24px;
 }
 
+.download-info {
+  min-width: 0;
+}
+
 .download-info h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 4px;
+  overflow-wrap: anywhere;
 }
 
 .download-info p {
   font-size: 0.9rem;
   color: var(--text-muted);
+  overflow-wrap: anywhere;
 }
 
 .download-buttons {

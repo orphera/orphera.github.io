@@ -8,11 +8,17 @@ const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/release
 const FALLBACK_VERSION = 'v0.4.0';
 const FALLBACK_RELEASE_URL = `https://github.com/${REPO_OWNER}/${REPO_NAME}/releases/latest`;
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   initReleaseInfo();
   initImagePlaceholders();
   initCarousel();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 async function initReleaseInfo() {
   const versionBadges = document.querySelectorAll('.js-latest-version');
@@ -88,6 +94,9 @@ function initImagePlaceholders() {
 function initCarousel() {
   const track = document.querySelector('.js-carousel-track');
   if (!track) return;
+
+  const slides = track.querySelectorAll('.carousel-slide');
+  if (!slides || slides.length === 0) return;
 
   const container = document.querySelector('.js-carousel');
   const prevBtn = document.querySelector('.js-carousel-prev');
@@ -212,6 +221,7 @@ function initCarousel() {
     }, { passive: true });
   }
 
+  goToSlide(0, false);
   startAutoPlay();
 }
 
