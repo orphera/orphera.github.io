@@ -28,9 +28,12 @@ async function initReleaseInfo() {
 
     const tagName = data.tag_name || FALLBACK_VERSION;
     const releaseUrl = data.html_url || FALLBACK_RELEASE_URL;
+    const pageLang = document.documentElement.lang || 'ko';
+    const dateLocales = { ko: 'ko-KR', en: 'en-US', ja: 'ja-JP' };
+    const fallbackDateStr = { ko: '최신', en: 'Latest', ja: '最新' };
     const publishedAt = data.published_at 
-      ? new Date(data.published_at).toLocaleDateString('ko-KR', { year: 'numeric', month: 'short', day: 'numeric' })
-      : '최신';
+      ? new Date(data.published_at).toLocaleDateString(dateLocales[pageLang] || 'ko-KR', { year: 'numeric', month: 'short', day: 'numeric' })
+      : (fallbackDateStr[pageLang] || '최신');
 
     versionBadges.forEach(el => {
       el.textContent = tagName;
@@ -92,12 +95,16 @@ function initCarousel() {
   const titleEl = document.querySelector('.js-preview-title');
   const tabBtns = document.querySelectorAll('.carousel-tab-btn');
   const dotEls = document.querySelectorAll('.carousel-dot');
-  const slides = document.querySelectorAll('.carousel-slide');
-
-  const slideTitles = [
-    '기본 오버레이 HUD (스마트 추천 & 티어표)',
-    '라이트 모드 (좌상단 스냅 고정)'
-  ];
+  const slideTitleAttrs = Array.from(slides).map(s => s.getAttribute('data-title')).filter(Boolean);
+  const fallbackTitles = {
+    ko: ['기본 오버레이 HUD (스마트 추천 & 티어표)', '라이트 모드 (좌상단 스냅 고정)'],
+    en: ['Standard Overlay HUD (Smart Recs & Tier List)', 'Lite Mode (Top-Left Snapped)'],
+    ja: ['標準オーバーレイHUD (スマート推薦 & 難易度表)', 'ライトモード (左上スナップ固定)']
+  };
+  const pageLang = document.documentElement.lang || 'ko';
+  const slideTitles = slideTitleAttrs.length === slides.length 
+    ? slideTitleAttrs 
+    : (fallbackTitles[pageLang] || fallbackTitles.ko);
 
   let currentIndex = 0;
   const slideCount = slides.length || 2;

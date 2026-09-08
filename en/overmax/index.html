@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC3RG31MF3"></script>
@@ -13,26 +13,26 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overmax - DJMAX RESPECT V 실시간 비공식 난이도 오버레이</title>
+  <title>Overmax - Real-time Unofficial Difficulty Overlay for DJMAX RESPECT V</title>
   
-  <meta name="description" content="DJMAX RESPECT V 선곡 화면에서 V-Archive 비공식 난이도와 유사 난이도 추천을 실시간으로 보여주는 초경량 Rust 네이티브 오버레이입니다.">
+  <meta name="description" content="Ultra-lightweight Rust native overlay for DJMAX RESPECT V, providing real-time V-Archive unofficial difficulty tiers and personalized song recommendations.">
   <meta name="theme-color" content="#0d1117">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 
   <!-- Open Graph / Discord / SNS -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Orphera / Overmax">
-  <meta property="og:url" content="https://orphera.github.io/overmax/">
-  <meta property="og:title" content="Overmax - DJMAX RESPECT V 실시간 비공식 난이도 오버레이">
-  <meta property="og:description" content="선곡 화면을 실시간 인식하여 V-Archive 비공식 난이도와 맞춤형 추천을 제공하는 초경량 Rust 네이티브 오버레이">
+  <meta property="og:url" content="https://orphera.github.io/en/overmax/">
+  <meta property="og:title" content="Overmax - Real-time Unofficial Difficulty Overlay for DJMAX RESPECT V">
+  <meta property="og:description" content="Ultra-lightweight Rust native overlay providing real-time V-Archive unofficial difficulty tiers and personalized song recommendations via pure screen capture.">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Overmax - DJMAX RESPECT V 실시간 비공식 난이도 오버레이">
-  <meta name="twitter:description" content="선곡 화면을 실시간 인식하여 V-Archive 비공식 난이도와 맞춤형 추천을 제공하는 초경량 Rust 네이티브 오버레이">
+  <meta name="twitter:title" content="Overmax - Real-time Unofficial Difficulty Overlay for DJMAX RESPECT V">
+  <meta name="twitter:description" content="Ultra-lightweight Rust native overlay providing real-time V-Archive unofficial difficulty tiers and personalized song recommendations via pure screen capture.">
 
   <!-- Alternate Language Links / SEO -->
-  <link rel="canonical" href="https://orphera.github.io/overmax/">
+  <link rel="canonical" href="https://orphera.github.io/en/overmax/">
   <link rel="alternate" hreflang="ko" href="https://orphera.github.io/overmax/">
   <link rel="alternate" hreflang="en" href="https://orphera.github.io/en/overmax/">
   <link rel="alternate" hreflang="ja" href="https://orphera.github.io/ja/overmax/">
@@ -40,7 +40,7 @@
 
   <!-- Pretendard Font -->
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 
@@ -59,16 +59,16 @@
       </div>
 
       <nav class="nav">
-        <a href="#features" class="nav-link nav-link-desktop">기능</a>
-        <a href="guide.html" class="nav-link">사용 가이드</a>
-        <a href="#download" class="nav-link nav-link-desktop">다운로드</a>
+        <a href="#features" class="nav-link nav-link-desktop">Features</a>
+        <a href="guide.html" class="nav-link">User Guide</a>
+        <a href="#download" class="nav-link nav-link-desktop">Download</a>
         <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 5px 10px; font-size: 0.82rem; white-space: nowrap;">
           GitHub ↗
         </a>
         <div class="lang-switch" aria-label="Language selector">
-          <span class="lang-btn active" aria-current="page">KO</span>
-          <a href="../en/overmax/" class="lang-btn" title="English">EN</a>
-          <a href="../ja/overmax/" class="lang-btn" title="日本語">JA</a>
+          <a href="../../overmax/" class="lang-btn" title="한국어">KO</a>
+          <span class="lang-btn active" aria-current="page">EN</span>
+          <a href="../../ja/overmax/" class="lang-btn" title="日本語">JA</a>
         </div>
       </nav>
     </div>
@@ -79,33 +79,33 @@
     <div class="container">
       <span class="hero-tag">DJMAX RESPECT V × V-Archive</span>
       <h1 class="hero-title">
-        실시간 비공식 난이도 오버레이
+        Real-time Unofficial Difficulty Overlay
       </h1>
       <p class="hero-desc">
-        선곡 화면을 실시간으로 인식하여 V-Archive 비공식 난이도와 맞춤형 추천을 제공합니다.<br class="break-desktop">
-        메모리 변조 없이 순수 화면 캡처와 Rust 기반의 초경량 성능으로 동작합니다.
+        Recognizes the song select screen in real time to display V-Archive unofficial difficulty tiers and personalized recommendations.<br class="break-desktop">
+        Operates purely through screen capture and Rust native performance with zero memory modification.
       </p>
 
       <div class="hero-actions">
         <a href="https://github.com/orphera/overmax/releases/latest/download/overmax.zip" class="btn btn-primary btn-lg js-dl-windows btn-desktop-only">
-          Windows 다운로드 (.zip)
+          Download for Windows (.zip)
         </a>
         <a href="guide.html" class="btn btn-primary btn-lg mobile-only">
-          사용 가이드 보기 →
+          View User Guide →
         </a>
         <a href="guide.html" class="btn btn-outline btn-lg desktop-only">
-          사용 가이드 보기
+          View User Guide
         </a>
         <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg mobile-only">
           GitHub ↗
         </a>
       </div>
       <div class="hero-meta desktop-only">
-        Windows 10 / 11 (64-bit) & Linux 지원 • 무료 오픈소스 • <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link" style="color: var(--accent-blue); text-decoration: underline;">릴리즈 노트 ↗</a>
+        Supports Windows 10 / 11 (64-bit) & Linux • Free & Open Source • <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link" style="color: var(--accent-blue); text-decoration: underline;">Release Notes ↗</a>
       </div>
       <div class="mobile-platform-notice">
-        🖥️ Overmax는 PC (Windows / Linux) 전용 오버레이 도구입니다.<br>
-        PC 환경에서 다운로드하여 실행해 주세요.
+        🖥️ Overmax is a desktop overlay tool for PC (Windows / Linux).<br>
+        Please download and run it on your PC.
       </div>
 
       <!-- Main Screenshot Preview Carousel -->
@@ -118,30 +118,30 @@
                 <span class="dot"></span>
                 <span class="dot"></span>
               </div>
-              <span class="preview-title js-preview-title">기본 오버레이 HUD</span>
+              <span class="preview-title js-preview-title">Standard Overlay HUD</span>
             </div>
             <div class="carousel-tabs">
-              <button type="button" class="carousel-tab-btn active" data-slide="0">기본 HUD</button>
-              <button type="button" class="carousel-tab-btn" data-slide="1">라이트 모드 (좌상단)</button>
+              <button type="button" class="carousel-tab-btn active" data-slide="0">Standard HUD</button>
+              <button type="button" class="carousel-tab-btn" data-slide="1">Lite Mode (Top-Left)</button>
             </div>
           </div>
           <div class="carousel-container js-carousel">
             <div class="carousel-track js-carousel-track">
               <!-- Slide 1: Standard Mode -->
-              <div class="carousel-slide" data-title="기본 오버레이 HUD (스마트 추천 & 티어표)">
-                <div class="placeholder-box" data-img="assets/images/hero-preview.jpg" data-alt="Overmax 기본 HUD 화면">
+              <div class="carousel-slide" data-title="Standard Overlay HUD (Smart Recs & Tier List)">
+                <div class="placeholder-box" data-img="../../overmax/assets/images/hero-preview.jpg" data-alt="Overmax Standard HUD Screen">
                   <div class="placeholder-text">
-                    📸 <strong>기본 오버레이 HUD (스마트 추천 & 티어표)</strong><br>
+                    📸 <strong>Standard Overlay HUD (Smart Recs & Tier List)</strong><br>
                     <code>overmax/assets/images/hero-preview.jpg</code>
                   </div>
                 </div>
               </div>
 
               <!-- Slide 2: Lite Mode -->
-              <div class="carousel-slide" data-title="라이트 모드 (좌상단 스냅 고정)">
-                <div class="placeholder-box" data-img="assets/images/hero-lite-preview.jpg" data-alt="Overmax 라이트 모드 (좌상단 스냅) 화면">
+              <div class="carousel-slide" data-title="Lite Mode (Top-Left Snapped)">
+                <div class="placeholder-box" data-img="../../overmax/assets/images/hero-lite-preview.jpg" data-alt="Overmax Lite Mode Screen">
                   <div class="placeholder-text">
-                    📸 <strong>라이트 모드 (좌상단 스냅 고정)</strong><br>
+                    📸 <strong>Lite Mode (Top-Left Snapped)</strong><br>
                     <code>overmax/assets/images/hero-lite-preview.jpg</code>
                   </div>
                 </div>
@@ -149,8 +149,8 @@
             </div>
 
             <!-- Navigation Controls -->
-            <button type="button" class="carousel-nav-btn carousel-prev js-carousel-prev" aria-label="이전 화면">❮</button>
-            <button type="button" class="carousel-nav-btn carousel-next js-carousel-next" aria-label="다음 화면">❯</button>
+            <button type="button" class="carousel-nav-btn carousel-prev js-carousel-prev" aria-label="Previous Slide">❮</button>
+            <button type="button" class="carousel-nav-btn carousel-next js-carousel-next" aria-label="Next Slide">❯</button>
 
             <!-- Pagination Dots -->
             <div class="carousel-pagination js-carousel-pagination">
@@ -167,25 +167,25 @@
   <!-- Key Features -->
   <section id="features" class="section">
     <div class="container">
-      <h2 class="section-title">주요 기능</h2>
+      <h2 class="section-title">Key Features</h2>
       <div class="features-list">
         
         <div class="feature-item">
           <div class="feature-icon">🎯</div>
-          <h3>맞춤 추천 곡</h3>
-          <p>Top-50 진입곡, 아쉽게 놓친 재도전곡, 오늘 세션의 컨디션을 분석하여 기록 갱신에 적합한 곡을 사유 뱃지와 함께 추천합니다.</p>
+          <h3>Personalized Recommendations</h3>
+          <p>Analyzes Top-50 breakthrough candidates, narrow-miss retries, and today's session condition to recommend optimal songs for rating growth with clear reason badges.</p>
         </div>
 
         <div class="feature-item">
           <div class="feature-icon">⬆️</div>
-          <h3>실시간 신기록 & 간편 업로드</h3>
-          <p>플레이 중 실시간 Rate를 감지하여 기존 V-Archive 기록을 갱신하면 헤더에 업로드 버튼(⬆)이 켜져 원클릭으로 전송할 수 있습니다.</p>
+          <h3>Real-time Record & Quick Upload</h3>
+          <p>Detects live accuracy rate during play and lights up the upload button (⬆) in the header whenever you achieve a new high score, enabling one-click upload to V-Archive.</p>
         </div>
 
         <div class="feature-item">
           <div class="feature-icon">🪶</div>
-          <h3>라이트 모드 (Lite Mode)</h3>
-          <p>세로 약 60px 크기의 컴팩트 바 레이아웃을 지원하며, 화면 4개 구석으로 흔들림 없이 자동 고정되어 인게임 몰입을 방해하지 않습니다.</p>
+          <h3>Lite Mode</h3>
+          <p>Provides an ultra-compact ~60px slim bar layout that securely snaps to any of the 4 screen corners without shaking, keeping you fully immersed in the gameplay.</p>
         </div>
 
       </div>
@@ -196,32 +196,32 @@
   <section id="guide" class="section">
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 8px;">
-        <h2 class="section-title" style="margin-bottom: 0;">빠른 시작</h2>
-        <a href="guide.html" style="font-size: 0.9rem; color: var(--accent-blue);">상세 가이드 전체보기 →</a>
+        <h2 class="section-title" style="margin-bottom: 0;">Quick Start</h2>
+        <a href="guide.html" style="font-size: 0.9rem; color: var(--accent-blue);">View Full Guide →</a>
       </div>
       
       <div class="steps-list">
         <div class="step-box">
           <div class="step-num">STEP 01</div>
-          <h4>압축 해제</h4>
-          <p>최신 <code>overmax.zip</code>을 다운로드하고 원하는 폴더에 압축을 풉니다.</p>
+          <h4>Extract Package</h4>
+          <p>Download the latest <code>overmax.zip</code> and extract it to your preferred folder.</p>
         </div>
 
         <div class="step-box">
           <div class="step-num">STEP 02</div>
-          <h4>프로그램 실행</h4>
-          <p><code>overmax.exe</code>를 실행합니다. 최신 곡 DB를 자동으로 확인합니다.</p>
+          <h4>Run Application</h4>
+          <p>Launch <code>overmax.exe</code>. It automatically checks and updates the latest song database.</p>
         </div>
 
         <div class="step-box">
           <div class="step-num">STEP 03</div>
-          <h4>게임 시작</h4>
-          <p>DJMAX RESPECT V를 실행하면 자동으로 게임 창을 인식하여 오버레이가 뜹니다.</p>
+          <h4>Launch Game</h4>
+          <p>Start DJMAX RESPECT V. Overmax detects the game window and overlays seamlessly.</p>
         </div>
       </div>
 
       <div class="notice-box">
-        💡 <strong>화면 설정 안내</strong>: 게임 옵션에서 화면 설정을 <strong>"전체 창 모드(Borderless)"</strong>로 설정해 주세요. <a href="guide.html#display-settings" style="color: var(--accent); text-decoration: underline;">자세히 알아보기</a>
+        💡 <strong>Display Setting Required</strong>: Set in-game display mode to <strong>"Borderless Window"</strong> (Borderless Fullscreen). <a href="guide.html#display-settings" style="color: var(--accent); text-decoration: underline;">Learn more</a>
       </div>
     </div>
   </section>
@@ -231,10 +231,10 @@
     <div class="container">
       <div class="download-card">
         <div class="download-info">
-          <h3>Overmax 다운로드</h3>
+          <h3>Download Overmax</h3>
           <p>
-            최신 릴리즈 <span class="js-latest-version">v0.4.0</span> (<span class="js-release-date">최신</span>) • 
-            <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link" style="color: var(--accent-blue); text-decoration: underline;">릴리즈 노트 ↗</a>
+            Latest Release <span class="js-latest-version">v0.4.0</span> (<span class="js-release-date">Latest</span>) • 
+            <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link" style="color: var(--accent-blue); text-decoration: underline;">Release Notes ↗</a>
           </p>
         </div>
 
@@ -248,8 +248,8 @@
         </div>
 
         <div class="mobile-platform-notice" style="margin: 0; width: 100%;">
-          💡 Overmax는 PC (Windows / Linux) 전용 데스크톱 오버레이 도구입니다.<br>
-          PC 브라우저에서 접속하여 다운로드해 주세요.
+          💡 Overmax is a desktop overlay tool for PC (Windows / Linux).<br>
+          Please download it on a desktop browser.
         </div>
       </div>
     </div>
@@ -261,23 +261,23 @@
       <div class="footer-links">
         <a href="../">Orphera Team</a>
         <span>•</span>
-        <a href="guide.html">사용 가이드</a>
+        <a href="guide.html">User Guide</a>
         <span>•</span>
         <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer">GitHub</a>
         <span>•</span>
-        <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link">릴리즈 노트</a>
+        <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link">Release Notes</a>
         <span>•</span>
-        <a href="https://github.com/orphera/overmax/releases" target="_blank" rel="noopener noreferrer">전체 릴리즈</a>
+        <a href="https://github.com/orphera/overmax/releases" target="_blank" rel="noopener noreferrer">All Releases</a>
         <span>•</span>
         <a href="https://v-archive.net" target="_blank" rel="noopener noreferrer">V-Archive</a>
       </div>
       <div class="footer-lang">
         <span class="footer-lang-label">🌐 Language:</span>
-        <span class="active">한국어</span>
+        <a href="../../overmax/">한국어</a>
         <span>•</span>
-        <a href="../en/overmax/">English</a>
+        <span class="active">English</span>
         <span>•</span>
-        <a href="../ja/overmax/">日本語</a>
+        <a href="../../ja/overmax/">日本語</a>
       </div>
       <p>
         Overmax is an open-source fan tool created by orphera. DJMAX RESPECT V is a trademark of NEOWIZ.
@@ -285,6 +285,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="../../overmax/main.js"></script>
 </body>
 </html>

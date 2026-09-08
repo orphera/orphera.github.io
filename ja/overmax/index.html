@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC3RG31MF3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RC3RG31MF3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overmax - DJMAX RESPECT V リアルタイム非公式難易度オーバーレイ</title>
+  
+  <meta name="description" content="DJMAX RESPECT Vの選曲画面でV-Archive非公式難易度とスマートおすすめ曲をリアルタイム表示する超軽量Rust製ネイティブオーバーレイです。">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <!-- Open Graph / Discord / SNS -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orphera / Overmax">
+  <meta property="og:url" content="https://orphera.github.io/ja/overmax/">
+  <meta property="og:title" content="Overmax - DJMAX RESPECT V リアルタイム非公式難易度オーバーレイ">
+  <meta property="og:description" content="選曲画面をリアルタイム認識し、V-Archive非公式難易度とパーソナライズされたおすすめ曲を提供する超軽量Rust製ネイティブオーバーレイ。">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Overmax - DJMAX RESPECT V リアルタイム非公式難易度オーバーレイ">
+  <meta name="twitter:description" content="選曲画面をリアルタイム認識し、V-Archive非公式難易度とパーソナライズされたおすすめ曲を提供する超軽量Rust製ネイティブオーバーレイ。">
+
+  <!-- Alternate Language Links / SEO -->
+  <link rel="canonical" href="https://orphera.github.io/ja/overmax/">
+  <link rel="alternate" hreflang="ko" href="https://orphera.github.io/overmax/">
+  <link rel="alternate" hreflang="en" href="https://orphera.github.io/en/overmax/">
+  <link rel="alternate" hreflang="ja" href="https://orphera.github.io/ja/overmax/">
+  <link rel="alternate" hreflang="x-default" href="https://orphera.github.io/overmax/">
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="../" class="header-back">
+          ← Orphera
+        </a>
+        <span class="header-divider">|</span>
+        <a href="#" class="logo">
+          <span>Overmax</span>
+          <span class="logo-badge js-latest-version">v0.4.0</span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="#features" class="nav-link nav-link-desktop">主な機能</a>
+        <a href="guide.html" class="nav-link">利用ガイド</a>
+        <a href="#download" class="nav-link nav-link-desktop">ダウンロード</a>
+        <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 5px 10px; font-size: 0.82rem; white-space: nowrap;">
+          GitHub ↗
+        </a>
+        <div class="lang-switch" aria-label="Language selector">
+          <a href="../../overmax/" class="lang-btn" title="한국어">KO</a>
+          <a href="../../en/overmax/" class="lang-btn" title="English">EN</a>
+          <span class="lang-btn active" aria-current="page">JA</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">DJMAX RESPECT V × V-Archive</span>
+      <h1 class="hero-title">
+        リアルタイム非公式難易度オーバーレイ
+      </h1>
+      <p class="hero-desc">
+        選曲画面をリアルタイムで認識し、V-Archive非公式難易度とパーソナライズされた推薦曲を提供します。<br class="break-desktop">
+        メモリ改変を行わず、純粋な画面キャプチャとRustによる超軽量パフォーマンスで動作します。
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/orphera/overmax/releases/latest/download/overmax.zip" class="btn btn-primary btn-lg js-dl-windows btn-desktop-only">
+          Windows版ダウンロード (.zip)
+        </a>
+        <a href="guide.html" class="btn btn-primary btn-lg mobile-only">
+          利用ガイドを見る →
+        </a>
+        <a href="guide.html" class="btn btn-outline btn-lg desktop-only">
+          利用ガイドを見る
+        </a>
+        <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg mobile-only">
+          GitHub ↗
+        </a>
+      </div>
+      <div class="hero-meta desktop-only">
+        Windows 10 / 11 (64-bit) & Linux 対応 • 無料・オープンソース • <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link" style="color: var(--accent-blue); text-decoration: underline;">リリースノート ↗</a>
+      </div>
+      <div class="mobile-platform-notice">
+        🖥️ OvermaxはPC (Windows / Linux) 専用のオーバーレイツールです。<br>
+        PC環境でダウンロードして実行してください。
+      </div>
+
+      <!-- Main Screenshot Preview Carousel -->
+      <div class="hero-media">
+        <div class="preview-frame">
+          <div class="preview-bar">
+            <div class="preview-bar-left">
+              <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="preview-title js-preview-title">標準オーバーレイHUD</span>
+            </div>
+            <div class="carousel-tabs">
+              <button type="button" class="carousel-tab-btn active" data-slide="0">標準HUD</button>
+              <button type="button" class="carousel-tab-btn" data-slide="1">ライトモード (左上)</button>
+            </div>
+          </div>
+          <div class="carousel-container js-carousel">
+            <div class="carousel-track js-carousel-track">
+              <!-- Slide 1: Standard Mode -->
+              <div class="carousel-slide" data-title="標準オーバーレイHUD (スマート推薦 & 難易度表)">
+                <div class="placeholder-box" data-img="../../overmax/assets/images/hero-preview.jpg" data-alt="Overmax 標準HUD画面">
+                  <div class="placeholder-text">
+                    📸 <strong>標準オーバーレイHUD (スマート推薦 & 難易度表)</strong><br>
+                    <code>overmax/assets/images/hero-preview.jpg</code>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Lite Mode -->
+              <div class="carousel-slide" data-title="ライトモード (左上スナップ固定)">
+                <div class="placeholder-box" data-img="../../overmax/assets/images/hero-lite-preview.jpg" data-alt="Overmax ライトモード画面">
+                  <div class="placeholder-text">
+                    📸 <strong>ライトモード (左上スナップ固定)</strong><br>
+                    <code>overmax/assets/images/hero-lite-preview.jpg</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <button type="button" class="carousel-nav-btn carousel-prev js-carousel-prev" aria-label="前の画面">❮</button>
+            <button type="button" class="carousel-nav-btn carousel-next js-carousel-next" aria-label="次の画面">❯</button>
+
+            <!-- Pagination Dots -->
+            <div class="carousel-pagination js-carousel-pagination">
+              <span class="carousel-dot active" data-slide="0"></span>
+              <span class="carousel-dot" data-slide="1"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">主な機能</h2>
+      <div class="features-list">
+        
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <h3>パーソナライズされた推薦曲</h3>
+          <p>Top-50突入候補曲、惜しくも逃した再挑戦曲、本日のセッション調子を分析し、レーティング更新に最適な曲を理由バッジとともに推薦します。</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">⬆️</div>
+          <h3>リアルタイム新記録 & 簡単アップロード</h3>
+          <p>プレイ中のリアルタイムRateを検知し、従来のV-Archive記録を更新するとヘッダーのアップロードボタン(⬆)が点灯、ワンクリックで送信できます。</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🪶</div>
+          <h3>ライトモード (Lite Mode)</h3>
+          <p>縦幅約60pxのコンパクトなバーレイアウトに対応し、画面4隅に吸い付くように自動固定され、インゲームへの没入感を妨げません。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Guide -->
+  <section id="guide" class="section">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 8px;">
+        <h2 class="section-title" style="margin-bottom: 0;">クイックスタート</h2>
+        <a href="guide.html" style="font-size: 0.9rem; color: var(--accent-blue);">詳細ガイドを見る →</a>
+      </div>
+      
+      <div class="steps-list">
+        <div class="step-box">
+          <div class="step-num">STEP 01</div>
+          <h4>解凍</h4>
+          <p>最新の <code>overmax.zip</code> をダウンロードし、お好みのフォルダに解凍します。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 02</div>
+          <h4>プログラム起動</h4>
+          <p><code>overmax.exe</code> を実行します。最新の楽曲DBを自動的に確認・更新します。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 03</div>
+          <h4>ゲーム開始</h4>
+          <p>DJMAX RESPECT Vを起動すると、自動的にゲーム画面を認識してオーバーレイが表示されます。</p>
+        </div>
+      </div>
+
+      <div class="notice-box">
+        💡 <strong>画面設定のご案内</strong>: ゲーム内設定で画面モードを <strong>「ボーダーレスウィンドウ (全画面ウィンドウ)」</strong> に設定してください。<a href="guide.html#display-settings" style="color: var(--accent); text-decoration: underline;">詳しく見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="section">
+    <div class="container">
+      <div class="download-card">
+        <div class="download-info">
+          <h3>Overmax ダウンロード</h3>
+          <p>
+            最新リリース <span class="js-latest-version">v0.4.0</span> (<span class="js-release-date">最新</span>) • 
+            <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link" style="color: var(--accent-blue); text-decoration: underline;">リリースノート ↗</a>
+          </p>
+        </div>
+
+        <div class="download-buttons desktop-only">
+          <a href="https://github.com/orphera/overmax/releases/latest/download/overmax.zip" class="btn btn-primary btn-lg js-dl-windows">
+            Windows版 (.zip)
+          </a>
+          <a href="https://github.com/orphera/overmax/releases/latest/download/overmax-linux-x86_64.tar.gz" class="btn btn-outline btn-lg js-dl-linux">
+            Linux版 (.tar.gz)
+          </a>
+        </div>
+
+        <div class="mobile-platform-notice" style="margin: 0; width: 100%;">
+          💡 OvermaxはPC (Windows / Linux) 専用のデスクトップオーバーレイツールです。<br>
+          PCブラウザからアクセスしてダウンロードしてください。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../">Orphera Team</a>
+        <span>•</span>
+        <a href="guide.html">利用ガイド</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/overmax/releases/latest" target="_blank" rel="noopener noreferrer" class="js-release-notes-link">リリースノート</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/overmax/releases" target="_blank" rel="noopener noreferrer">全リリース</a>
+        <span>•</span>
+        <a href="https://v-archive.net" target="_blank" rel="noopener noreferrer">V-Archive</a>
+      </div>
+      <div class="footer-lang">
+        <span class="footer-lang-label">🌐 Language:</span>
+        <a href="../../overmax/">한국어</a>
+        <span>•</span>
+        <a href="../../en/overmax/">English</a>
+        <span>•</span>
+        <span class="active">日本語</span>
+      </div>
+      <p>
+        Overmax is an open-source fan tool created by orphera. DJMAX RESPECT V is a trademark of NEOWIZ.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../../overmax/main.js"></script>
+</body>
+</html>

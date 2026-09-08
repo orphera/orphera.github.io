@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC3RG31MF3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RC3RG31MF3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overmax 利用ガイド - DJMAX RESPECT V オーバーレイ</title>
+  
+  <meta name="description" content="Overmaxのインストール、ゲーム画面設定、V-Archive連携、ライトモード、トラブルシューティングの公式ガイドです。">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <!-- Open Graph / Discord / SNS -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Orphera / Overmax">
+  <meta property="og:url" content="https://orphera.github.io/ja/overmax/guide.html">
+  <meta property="og:title" content="Overmax 利用ガイド - インストール、画面設定、V-Archive連携">
+  <meta property="og:description" content="Overmaxのボーダーレスウィンドウ設定、V-Archiveスコア参照、新記録アップロード、ライトモードの使い方ガイド。">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Overmax 利用ガイド - インストール、画面設定、V-Archive連携">
+  <meta name="twitter:description" content="Overmaxのボーダーレスウィンドウ設定、V-Archiveスコア参照、新記録アップロード、ライトモードの使い方ガイド。">
+
+  <!-- Alternate Language Links / SEO -->
+  <link rel="canonical" href="https://orphera.github.io/ja/overmax/guide.html">
+  <link rel="alternate" hreflang="ko" href="https://orphera.github.io/overmax/guide.html">
+  <link rel="alternate" hreflang="en" href="https://orphera.github.io/en/overmax/guide.html">
+  <link rel="alternate" hreflang="ja" href="https://orphera.github.io/ja/overmax/guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://orphera.github.io/overmax/guide.html">
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="../" class="header-back">
+          ← Orphera
+        </a>
+        <span class="header-divider">|</span>
+        <a href="./" class="logo">
+          <span>Overmax</span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="./" class="nav-link">紹介</a>
+        <a href="#display-settings" class="nav-link nav-link-desktop">画面設定</a>
+        <a href="#hud-guide" class="nav-link nav-link-desktop">機能説明</a>
+        <a href="#varchive-sync" class="nav-link nav-link-desktop">V-Archive</a>
+        <a href="#faq" class="nav-link nav-link-tablet">FAQ</a>
+        <a href="./#download" class="btn btn-primary btn-download-desktop" style="padding: 5px 12px; font-size: 0.82rem; white-space: nowrap;">
+          ダウンロード
+        </a>
+        <div class="lang-switch" aria-label="Language selector">
+          <a href="../../overmax/guide.html" class="lang-btn" title="한국어">KO</a>
+          <a href="../../en/overmax/guide.html" class="lang-btn" title="English">EN</a>
+          <span class="lang-btn active" aria-current="page">JA</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 30px; padding-bottom: 60px;">
+    
+    <!-- Guide Title -->
+    <div class="guide-header">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        <span class="badge badge-rust">公式利用ガイド</span>
+        <span class="badge" style="color: var(--accent-blue); border-color: rgba(88, 166, 255, 0.4);">Overmax v0.4.0 準拠</span>
+      </div>
+      <h1 class="guide-title">Overmax 利用ガイド</h1>
+      <p class="guide-desc">
+        Overmaxのインストールからゲーム画面設定、オーバーレイHUDの見方、パーソナライズ推薦曲リスト、V-Archive連携、トラブルシューティングをご案内します。
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="guide-toc">
+      <div class="guide-toc-title">
+        <span>📑</span> 目次
+      </div>
+      <ul class="guide-toc-list">
+        <li>
+          <a href="#install" class="guide-toc-link">
+            <span class="guide-toc-num">01</span>
+            <span>インストール & クイックスタート</span>
+          </a>
+        </li>
+        <li>
+          <a href="#display-settings" class="guide-toc-link">
+            <span class="guide-toc-num">02</span>
+            <span>ゲーム画面設定 (必読)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#hud-guide" class="guide-toc-link">
+            <span class="guide-toc-num">03</span>
+            <span>オーバーレイ画面の見方</span>
+          </a>
+        </li>
+        <li>
+          <a href="#custom-settings" class="guide-toc-link">
+            <span class="guide-toc-num">04</span>
+            <span>設定とカスタマイズ</span>
+          </a>
+        </li>
+        <li>
+          <a href="#varchive-sync" class="guide-toc-link">
+            <span class="guide-toc-num">05</span>
+            <span>V-Archive連携 & 記録同期ウィンドウ</span>
+          </a>
+        </li>
+        <li>
+          <a href="#faq" class="guide-toc-link">
+            <span class="guide-toc-num">06</span>
+            <span>よくある質問 (FAQ)</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Install -->
+    <section id="install" class="guide-section">
+      <h2><span class="guide-toc-num">01</span> インストール & クイックスタート</h2>
+      <p>Overmaxはインストーラー不要で、解凍してすぐに使えるポータブル（Portable）単一パッケージとして提供されます。</p>
+      
+      <div class="steps-list" style="margin-top: 18px;">
+        <div class="step-box">
+          <div class="step-num">STEP 01</div>
+          <h4>パッケージのダウンロード</h4>
+          <p><a href="./#download" style="color: var(--accent-blue); text-decoration: underline;">ダウンロードページ</a>から最新の <code>overmax.zip</code> をダウンロードします。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 02</div>
+          <h4>解凍 & 実行</h4>
+          <p>お好みのフォルダに解凍し、<code>overmax.exe</code> を実行します。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 03</div>
+          <h4>ゲームの自動認識</h4>
+          <p>DJMAX RESPECT Vを起動すると、自動的にゲームウィンドウを検知してオーバーレイが表示されます。</p>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">💡 スマート自動アップデート</div>
+        アプリ起動時に最新の楽曲データベース(<code>image_index.db</code>)および新バージョンの有無をバックグラウンドで自動確認し、常に最新のメタデータを維持します。
+      </div>
+    </section>
+
+    <!-- Section 2: Display Settings -->
+    <section id="display-settings" class="guide-section">
+      <h2><span class="guide-toc-num">02</span> ⚠️ ゲーム画面設定 (必読)</h2>
+      <p>アンチチート(XIGNCODE3)およびWindows OSのウィンドウ描画制限により、以下の画面モード設定を必ずご確認ください。</p>
+
+      <div class="callout callout-success">
+        <div class="callout-title">✅ 推奨設定: ボーダーレスウィンドウ (全画面ウィンドウ)</div>
+        ゲーム内の <strong>[OPTION] → [GRAPHICS] → 画面モードを「ボーダーレス (Borderless)」</strong> に設定してください。ゲーム画面の上にオーバーレイが隠れることなく正常にオーバーラップ表示されます。
+      </div>
+
+      <div class="guide-card" style="margin-top: 16px;">
+        <div class="guide-card-title">🖥️ 専有フルスクリーンを使用する必要がある場合</div>
+        <p style="margin-bottom: 0;">
+          ゲームを通常の「フルスクリーン(Fullscreen)」で起動すると、OSの仕様上オーバーレイがゲーム画面の背面に隠れてしまいます。<br>
+          専有フルスクリーンが必須の環境では、オーバーレイウィンドウをドラッグして<strong>デュアルモニターのサブ画面</strong>に配置してプレイしてください。
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: HUD Guide -->
+    <section id="hud-guide" class="guide-section">
+      <h2><span class="guide-toc-num">03</span> オーバーレイ画面の見方</h2>
+      
+      <h3>1) 上部ヘッダー & クイックアクション</h3>
+      <ul>
+        <li><strong>楽曲情報 & 判定</strong>: 現在選択中の曲名、アーティスト、ボタンモード(4B/5B/6B/8B)、リアルタイム最高達成率(Rate)、MAX COMBO(<code>[M]</code>, <code>[P]</code>)バッジを表示します。</li>
+        <li><strong>⬆ ワンクリックアップロード</strong>: 従来のV-Archive記録を上回る新記録が検知されると有効化され、クリックすると即座にWebサーバーへ個別アップロードされます。</li>
+        <li><strong>🔄 記録同期 (Sync)</strong>: ローカルに蓄積された複数の新記録を一括で確認し、選択アップロードや削除が行える同期ウィンドウを開きます。</li>
+        <li><strong>⚙ 設定</strong>: サイズ、透明度、スマート推薦モード、V-Archiveアカウント連携などを調整する設定ウィンドウを開きます。</li>
+      </ul>
+
+      <h3>2) 非公式難易度表</h3>
+      <p>
+        V-Archiveのデータを基に、各譜面難易度(NM / HD / MX / SC)の細分化された非公式難易度数値(例: <code>10.1</code>)を表示します。現在選択中のパターンは明るくハイライトされます。
+      </p>
+
+      <h3>3) おすすめ曲リスト</h3>
+      <p>
+        プレイヤーの実力分布と当日のセッション調子を分析し、レーティング向上と実力アップに最適な曲を推薦します。
+      </p>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px 20px; margin: 16px 0 20px;">
+        <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">
+          <span>🏷️</span> 推薦理由バッジのご案内
+        </div>
+        <ul class="badge-reco-list">
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-top">TOP</span>
+            <div class="badge-reco-desc">
+              <strong>Top-50突破</strong>: V-Archive Top 50ランキングのボーダーライン突破が狙える有力候補曲（レーティング大幅上昇）。
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-def">DEF</span>
+            <div class="badge-reco-desc">
+              <strong>Top-50防衛</strong>: 現在自身の41〜50位に位置し、押し出される危険がある防衛対象曲。
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-up">UP</span>
+            <div class="badge-reco-desc">
+              <strong>上昇モメンタム</strong>: 本日のセッション調子(Performance Rating)が良く、挑戦に適した上位難易度曲。
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-rest">REST</span>
+            <div class="badge-reco-desc">
+              <strong>回復・安定化</strong>: 調子が振るわない時やウォーミングアップ用の感覚維持に適した安定曲。
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-try">TRY</span>
+            <div class="badge-reco-desc">
+              <strong>再挑戦</strong>: 目標精度に近かったものの惜しくも逃し、直近14日間未プレイの更新有力曲。
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-clr">CLR</span>
+            <div class="badge-reco-desc">
+              <strong>未プレイ初クリア</strong>: まだ一度も記録が登録されていない新規パターン。
+            </div>
+          </li>
+        </ul>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 12px; margin-bottom: 0;">
+          💡 ゲーム内のオーバーレイで各バッジにマウスを合わせると、詳細な推薦理由（ツールチップ）が確認できます。
+        </p>
+      </div>
+
+      <h3>4) 下部フッター & 推奨難易度ラベル</h3>
+      <p>
+        選曲カーソルの位置に関わらず、プレイヤーの実力帯に合わせた安定的な推奨難易度と統計を下部フッターに固定表示します。
+      </p>
+
+      <div class="hud-preview-widget">
+        <div class="hud-preview-left">
+          🎯 推奨 SC 13
+        </div>
+        <div class="hud-preview-right">
+          平均 99.12% (14/20)
+        </div>
+      </div>
+      <ul>
+        <li><strong>推奨難易度 (左側)</strong>: TrueSkillベースの統計的実力分布モデル(<code>SkillProfile</code>)により算出された最適推奨難易度です。</li>
+        <li><strong>帯域平均達成率 (右側)</strong>: 該当の推奨難易度帯内でプレイヤーが記録した平均Rateおよび完走曲の割合をリアルタイム集計します。</li>
+      </ul>
+    </section>
+
+    <!-- Section 4: Custom Settings -->
+    <section id="custom-settings" class="guide-section">
+      <h2><span class="guide-toc-num">04</span> 設定とカスタマイズ (⚙)</h2>
+      <p>オーバーレイヘッダーの<strong>歯車ボタン(⚙)</strong>を押すと、4つの専用タブで構成された設定ウィンドウが開きます。</p>
+
+      <div class="guide-cards-grid">
+        <div class="guide-card">
+          <div class="guide-card-title">⚙️ [一般] タブ</div>
+          <ul>
+            <li><strong>サイズ調整 (S / M / L / XL)</strong>: モニター解像度(FHD, QHD, 4K等)に合わせて4段階でスケーリングできます。</li>
+            <li><strong>透明度調整</strong>: ゲーム内の視界を妨げないよう、スライダーで背景の透明度を調整します。</li>
+            <li><strong>位置スナップ</strong>: 画面4隅(↖ 左上, ↗ 右上, ↙ 左下, ↘ 右下)の任意の位置に自動固定、または手動ドラッグが可能です。</li>
+            <li><strong>多言語対応 (i18n)</strong>: 日本語、韓国語、英語の3言語をサポートしています。</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-title">🎯 [推薦] タブ</div>
+          <ul>
+            <li><strong>推薦モード</strong>: 多次元分析に基づく<code>スマート(Smart)</code>モードと、単純な達成率順の<code>クラシック(Classic)</code>モードから選択できます。</li>
+            <li><strong>目標精度 (Target Rate)</strong>: <code>97%</code>, <code>99%(標準)</code>, <code>99.5%</code>, <code>100%</code> からプレイスタイルに合わせて設定可能です。</li>
+            <li><strong>未所持DLC除外</strong>: プレイ履歴から所持DLCを自動推定し、未所持曲のおすすめを防ぎます。</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-title">☁️ [V-Archive] タブ</div>
+          <ul>
+            <li><strong>V-Archive ID</strong>: 自身のニックネームを入力して記録を自動同期します。</li>
+            <li><strong>account.txt パス</strong>: V-Archiveクライアントの認証ファイルを指定し、リアルタイムアップロードを有効にします。</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-title">🔧 [高度] タブ</div>
+          <ul>
+            <li><strong>キャプチャバックエンド</strong>: 標準の自動モードのほか、<code>GDI</code> および高速な <code>DXGI Desktop Duplication</code> を実行時に切り替えられます。</li>
+            <li><strong>画面キャプチャ除外</strong>: スクリーンショットや配信・録画(OBS)時にオーバーレイを透明化するかどうかを設定します。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-tip" style="margin-top: 10px;">
+        <div class="callout-title">🪶 ライトモード (Lite Mode) のご案内</div>
+        推薦リストなどの付加要素を非表示にし、必須情報のみを表示する<strong>高さ約60pxの超スリムバー</strong>レイアウトです。<br>
+        通常HUDおよびライトモードの両方で、画面4隅へのスナップ固定とマウスドラッグに完全対応しています。
+      </div>
+    </section>
+
+    <!-- Section 5: V-Archive Sync -->
+    <section id="varchive-sync" class="guide-section">
+      <h2><span class="guide-toc-num">05</span> V-Archive連携 & 記録同期ウィンドウ詳細ガイド</h2>
+      <p>
+        Overmaxは複雑なAPIトークン発行なしで、用途に応じて<strong>記録の閲覧</strong>または<strong>リアルタイム/一括新記録アップロード</strong>を簡単に設定してご利用いただけます。
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
+        <!-- Case 1: Fetch Only -->
+        <div class="feature-item" style="border-left: 3px solid var(--accent-blue);">
+          <h3 style="margin-top: 0; color: var(--accent-blue); font-size: 1.05rem;">
+            📥 ケース1. 自分のプレイ記録のみを読み込みたい場合 (閲覧専用)
+          </h3>
+          <p style="font-size: 0.9rem; margin-bottom: 10px;">
+            V-Archiveに登録済みのプレイ記録と非公式難易度をオーバーレイに表示して参考にしながらプレイする方法です。
+          </p>
+          <ol style="margin-bottom: 0;">
+            <li>オーバーレイヘッダーの<strong>設定ボタン(⚙)</strong>を押し、[V-Archive]タブへ移動します。</li>
+            <li>自身の<strong>V-Archive ID(ニックネーム)</strong>を入力します。</li>
+            <li><strong>[更新]</strong>ボタンを押すと、V-Archiveの記録を即座に取得します。</li>
+            <li>以降はOvermax起動時に自動で最新の記録を取得・反映します。</li>
+          </ol>
+        </div>
+
+        <!-- Case 2: Fetch & Upload -->
+        <div class="feature-item" style="border-left: 3px solid var(--accent);">
+          <h3 style="margin-top: 0; color: var(--accent); font-size: 1.05rem;">
+            📤 ケース2. プレイ中に新記録をV-Archiveへアップロードしたい場合
+          </h3>
+          <p style="font-size: 0.9rem; margin-bottom: 10px;">
+            ゲーム内でリアルタイムに更新した自己ベストをV-Archiveに直接登録する方法です。
+          </p>
+          <ol style="margin-bottom: 0;">
+            <li>設定ウィンドウ(⚙)で自身の<strong>V-Archive ID(ニックネーム)</strong>を入力します。</li>
+            <li>V-Archive公式クライアントで使用される <strong><code>account.txt</code> ファイルのパス</strong>を設定画面で指定します。</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Sync Window In-depth Guide -->
+      <div style="margin-top: 28px;">
+        <h3 style="font-size: 1.15rem; color: var(--text); display: flex; align-items: center; gap: 8px;">
+          <span>🔄</span> V-Archive記録同期ウィンドウ (Sync Window) 詳細ガイド
+        </h3>
+        <p>
+          オーバーレイヘッダー右側の<strong>🔄 同期ボタン</strong>を押すと開く専用ウィンドウです。プレイ中にローカルDB(<code>record.db</code>)へ蓄積された複数の新記録を一括確認し、選択登録や不要な記録の整理が行えます。
+        </p>
+
+        <div class="guide-cards-grid" style="margin-top: 18px;">
+          <div class="guide-card">
+            <div class="guide-card-title">🔍 1. アカウント確認 & 候補スキャン</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              上部カードに現在ログイン中のSteamアカウント(ニックネームおよびSteam ID)が自動検知されます。
+            </p>
+            <ul>
+              <li><strong>[スキャン]ボタン</strong>: ローカル記録とV-Archiveデータを照合し、未登録曲やスコア更新候補を即座にスキャンします。</li>
+              <li>複数アカウントを使用している場合、Steam ID入力欄から直接対象を切り替えられます。</li>
+            </ul>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-title">🎛️ 2. スマート詳細フィルター (▼)</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              <strong>▼ フィルター</strong>ボタンを押して、確認したい譜面のみを素早く絞り込めます。
+            </p>
+            <ul>
+              <li><strong>ボタンモード & 難易度</strong>: 4B/5B/6B/8B および NM/HD/MX/SC 個別トグル</li>
+              <li><strong>レベル & Rate 範囲指定</strong>: <code>Lv.1 〜 SC 15</code> および <code>0% 〜 100%</code></li>
+              <li><strong>特殊条件フィルター</strong>: 「V-Archive未所持MAX COMBOのみ表示」、「未登録記録除外」など</li>
+            </ul>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-title">📊 3. 候補リストの並び替え</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              検出された更新候補(例: <code>12 / 45</code>)を任意の基準で並び替えます。
+            </p>
+            <ul>
+              <li><strong>変動幅順 (Rate Diff)</strong>: 従来記録からの伸び幅(例: <code>+0.45%</code>)が大きい順に並べ、レート向上に効果的な曲から確認します。</li>
+              <li><strong>曲名順 (Title)</strong>: ボタンモードおよび曲名のアルファベット/五十音順に並び替えます。</li>
+            </ul>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-title">⚡ 4. 個別登録およびローカル削除</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              各候補の達成Rate、MAX COMBO状況、理由バッジを確認して処理します。
+            </p>
+            <ul>
+              <li><strong>[登録] (Upload)</strong>: 該当パターンの記録をV-Archiveへ送信します。</li>
+              <li><strong>[削除] (Delete)</strong>: 誤認識やアップロードしたくないローカル記録を安全に削除します。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-tip" style="margin-top: 14px; margin-bottom: 0;">
+          <div class="callout-title">💡 リアルタイムアップロード (⬆) と 同期ウィンドウ (🔄) の使い分け</div>
+          <ul style="margin-bottom: 0; padding-left: 18px;">
+            <li><strong>ヘッダー ⬆ ボタン (リアルタイム)</strong>: プレイ直後、更新したばかりの<strong>単一パターン</strong>を即座に送信したいときに使用します。(3秒間のトースト通知で結果表示)</li>
+            <li><strong>ヘッダー 🔄 ボタン (同期ウィンドウ)</strong>: セッション終了後など、<strong>蓄積された複数の新記録をまとめて確認・選択登録</strong>したい場合や、誤認識ログを整理したいときに使用します。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: FAQ -->
+    <section id="faq" class="guide-section">
+      <h2><span class="guide-toc-num">06</span> よくある質問 (FAQ)</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 画面認識が全く動作しません。</div>
+        <div class="faq-a">
+          DJMAX RESPECT Vが起動しているか確認し、ゲームの画面モード設定が「ボーダーレス」または「ウィンドウモード」になっているかご確認ください。
+          管理者権限の問題や、他の特殊なグラフィックオーバーレイツールとの競合がないかも点検してください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. デュアル/マルチモニター環境でオーバーレイが表示されない・認識されません。</div>
+        <div class="faq-a">
+          マルチモニターの配置や仮想座標設定によって、DXGIキャプチャがサブモニターを見失う場合があります。<br class="break-desktop">
+          オーバーレイヘッダーの<strong>設定ボタン(⚙) → [高度]タブ</strong>へ移動し、<strong>キャプチャバックエンドを「GDI」</strong>に変更してください。すべてのマルチモニター環境で最も安定して動作します。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. スクリーンショットや配信/録画ソフト(OBS等)にオーバーレイが映りません。</div>
+        <div class="faq-a">
+          画面キャプチャ時にオーバーレイウィンドウが自分自身を再認識してしまう干渉を防ぐため、Windows画面キャプチャ除外(DisplayAffinity)機能が初期状態で有効になっています。<br class="break-desktop">
+          スクリーンショットや配信画面にオーバーレイを含めたい場合は、<strong>設定(⚙) → [高度]タブ → [画面キャプチャ除外]</strong> のチェックを外して(OFF)ください。<br>
+          <span style="color: var(--accent);">⚠️ 注意</span>: キャプチャ除外を無効にした場合、オーバーレイがゲームUIの認識領域と重なると認識に影響が出る場合があります。オーバーレイを認識領域の外側やサブモニターへ配置してください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. メモリ改変やインジェクションによるアカウント停止のリスクはありますか？</div>
+        <div class="faq-a">
+          いいえ。Overmaxはゲームプロセスのメモリの読み込みや改変を一切行わず、Win32ウィンドウキャプチャAPIのみを使用して画面画像を認識するため安全です。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. Linuxでも利用できますか？</div>
+        <div class="faq-a">
+          はい。x86_64 Linux環境(Proton / XWayland)向けの配布パッケージ(<code>overmax-linux-x86_64.tar.gz</code>)を提供しています。
+          詳しいセットアップ手順はGitHubのLinuxガイド文書をご参照ください。
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../">Orphera Team</a>
+        <span>•</span>
+        <a href="./">Overmax紹介</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://v-archive.net" target="_blank" rel="noopener noreferrer">V-Archive</a>
+      </div>
+      <div class="footer-lang">
+        <span class="footer-lang-label">🌐 Language:</span>
+        <a href="../../overmax/guide.html">한국어</a>
+        <span>•</span>
+        <a href="../../en/overmax/guide.html">English</a>
+        <span>•</span>
+        <span class="active">日本語</span>
+      </div>
+      <p>
+        Overmax is an open-source fan tool created by orphera. DJMAX RESPECT V is a trademark of NEOWIZ.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

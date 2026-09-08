@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC3RG31MF3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RC3RG31MF3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overmax User Guide - DJMAX RESPECT V Overlay</title>
+  
+  <meta name="description" content="Guide for Overmax installation, in-game display settings, V-Archive integration, Lite mode, and troubleshooting.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <!-- Open Graph / Discord / SNS -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Orphera / Overmax">
+  <meta property="og:url" content="https://orphera.github.io/en/overmax/guide.html">
+  <meta property="og:title" content="Overmax User Guide - Installation, Display Settings, V-Archive">
+  <meta property="og:description" content="Guide for Overmax borderless fullscreen setup, V-Archive score lookup, high-score uploads, and Lite mode usage.">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Overmax User Guide - Installation, Display Settings, V-Archive">
+  <meta name="twitter:description" content="Guide for Overmax borderless fullscreen setup, V-Archive score lookup, high-score uploads, and Lite mode usage.">
+
+  <!-- Alternate Language Links / SEO -->
+  <link rel="canonical" href="https://orphera.github.io/en/overmax/guide.html">
+  <link rel="alternate" hreflang="ko" href="https://orphera.github.io/overmax/guide.html">
+  <link rel="alternate" hreflang="en" href="https://orphera.github.io/en/overmax/guide.html">
+  <link rel="alternate" hreflang="ja" href="https://orphera.github.io/ja/overmax/guide.html">
+  <link rel="alternate" hreflang="x-default" href="https://orphera.github.io/overmax/guide.html">
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="../" class="header-back">
+          ← Orphera
+        </a>
+        <span class="header-divider">|</span>
+        <a href="./" class="logo">
+          <span>Overmax</span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="./" class="nav-link">About</a>
+        <a href="#display-settings" class="nav-link nav-link-desktop">Display Settings</a>
+        <a href="#hud-guide" class="nav-link nav-link-desktop">HUD Guide</a>
+        <a href="#varchive-sync" class="nav-link nav-link-desktop">V-Archive</a>
+        <a href="#faq" class="nav-link nav-link-tablet">FAQ</a>
+        <a href="./#download" class="btn btn-primary btn-download-desktop" style="padding: 5px 12px; font-size: 0.82rem; white-space: nowrap;">
+          Download
+        </a>
+        <div class="lang-switch" aria-label="Language selector">
+          <a href="../../overmax/guide.html" class="lang-btn" title="한국어">KO</a>
+          <span class="lang-btn active" aria-current="page">EN</span>
+          <a href="../../ja/overmax/guide.html" class="lang-btn" title="日本語">JA</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 30px; padding-bottom: 60px;">
+    
+    <!-- Guide Title -->
+    <div class="guide-header">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        <span class="badge badge-rust">Official User Guide</span>
+        <span class="badge" style="color: var(--accent-blue); border-color: rgba(88, 166, 255, 0.4);">Based on Overmax v0.4.0</span>
+      </div>
+      <h1 class="guide-title">Overmax User Guide</h1>
+      <p class="guide-desc">
+        Everything you need to know: installation, in-game display configuration, HUD elements, personalized song recommendations, V-Archive sync, and troubleshooting.
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="guide-toc">
+      <div class="guide-toc-title">
+        <span>📑</span> Table of Contents
+      </div>
+      <ul class="guide-toc-list">
+        <li>
+          <a href="#install" class="guide-toc-link">
+            <span class="guide-toc-num">01</span>
+            <span>Installation & Quick Start</span>
+          </a>
+        </li>
+        <li>
+          <a href="#display-settings" class="guide-toc-link">
+            <span class="guide-toc-num">02</span>
+            <span>Game Display Settings (Must-Read)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#hud-guide" class="guide-toc-link">
+            <span class="guide-toc-num">03</span>
+            <span>Overlay HUD Overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="#custom-settings" class="guide-toc-link">
+            <span class="guide-toc-num">04</span>
+            <span>Settings & Customization</span>
+          </a>
+        </li>
+        <li>
+          <a href="#varchive-sync" class="guide-toc-link">
+            <span class="guide-toc-num">05</span>
+            <span>V-Archive Sync & Sync Window</span>
+          </a>
+        </li>
+        <li>
+          <a href="#faq" class="guide-toc-link">
+            <span class="guide-toc-num">06</span>
+            <span>Frequently Asked Questions (FAQ)</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Install -->
+    <section id="install" class="guide-section">
+      <h2><span class="guide-toc-num">01</span> Installation & Quick Start</h2>
+      <p>Overmax is provided as a standalone portable package requiring no heavy installers.</p>
+      
+      <div class="steps-list" style="margin-top: 18px;">
+        <div class="step-box">
+          <div class="step-num">STEP 01</div>
+          <h4>Download Package</h4>
+          <p>Download the latest <code>overmax.zip</code> from the <a href="./#download" style="color: var(--accent-blue); text-decoration: underline;">download section</a>.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 02</div>
+          <h4>Extract & Run</h4>
+          <p>Extract the files to any folder and execute <code>overmax.exe</code>.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 03</div>
+          <h4>Automatic Detection</h4>
+          <p>Launch DJMAX RESPECT V. Overmax detects the game window and automatically displays the overlay.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">💡 Smart Auto Update</div>
+        When launched, Overmax checks for the latest song database (<code>image_index.db</code>) and app updates in the background to ensure metadata is always current.
+      </div>
+    </section>
+
+    <!-- Section 2: Display Settings -->
+    <section id="display-settings" class="guide-section">
+      <h2><span class="guide-toc-num">02</span> ⚠️ Game Display Settings (Must-Read)</h2>
+      <p>Due to the anti-cheat system (XIGNCODE3) and Windows window rendering rules, please verify your in-game display mode setting below.</p>
+
+      <div class="callout callout-success">
+        <div class="callout-title">✅ Recommended: Borderless Fullscreen (Borderless Window)</div>
+        Set the in-game display mode in <strong>[OPTION] → [GRAPHICS] → Display Mode to "Borderless"</strong>. This ensures the overlay sits properly on top of the game without being blocked.
+      </div>
+
+      <div class="guide-card" style="margin-top: 16px;">
+        <div class="guide-card-title">🖥️ If You Must Use Exclusive Fullscreen</div>
+        <p style="margin-bottom: 0;">
+          If the game is launched in traditional "Fullscreen" mode, Windows OS will hide overlays behind the game screen.<br>
+          If your setup strictly requires Exclusive Fullscreen, you can drag the Overmax window to a <strong>secondary monitor in a dual-display setup</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: HUD Guide -->
+    <section id="hud-guide" class="guide-section">
+      <h2><span class="guide-toc-num">03</span> Overlay HUD Overview</h2>
+      
+      <h3>1) Top Header & Quick Actions</h3>
+      <ul>
+        <li><strong>Song Info & Accuracy</strong>: Displays the currently selected song title, artist, button mode (4B/5B/6B/8B), real-time personal best Rate, and MAX COMBO (<code>[M]</code>, <code>[P]</code>) badges.</li>
+        <li><strong>⬆ One-Click Upload</strong>: Activates when a new score higher than your existing V-Archive record is detected. Click to upload immediately to the server.</li>
+        <li><strong>🔄 Sync Window</strong>: Opens a dedicated window to inspect multiple locally accumulated scores and upload or clean them up in batches.</li>
+        <li><strong>⚙ Settings</strong>: Opens the configuration window to adjust scale, opacity, recommendation mode, and V-Archive account binding.</li>
+      </ul>
+
+      <h3>2) Unofficial Difficulty Tier List</h3>
+      <p>
+        Displays detailed unofficial difficulty ratings (e.g. <code>10.1</code>) for each difficulty chart (NM / HD / MX / SC) powered by V-Archive data. The currently selected pattern is highlighted.
+      </p>
+
+      <h3>3) Personalized Song Recommendations</h3>
+      <p>
+        Analyzes your personal rating distribution and current session performance to recommend the most suitable songs for rating progression.
+      </p>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px 20px; margin: 16px 0 20px;">
+        <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;">
+          <span>🏷️</span> Recommendation Reason Badges
+        </div>
+        <ul class="badge-reco-list">
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-top">TOP</span>
+            <div class="badge-reco-desc">
+              <strong>Top-50 Breakthrough</strong>: Strong candidate song capable of entering your V-Archive Top 50 rating cutline (maximizes rating increase).
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-def">DEF</span>
+            <div class="badge-reco-desc">
+              <strong>Top-50 Defense</strong>: A song currently ranked 41st–50th on your profile at risk of falling out of the Top 50.
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-up">UP</span>
+            <div class="badge-reco-desc">
+              <strong>Upward Momentum</strong>: Your session Performance Rating is hot today; higher-tier challenge songs worth tackling now.
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-rest">REST</span>
+            <div class="badge-reco-desc">
+              <strong>Recovery / Warm-Up</strong>: Consistent comfort songs for finger warming or regaining consistency during low condition.
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-try">TRY</span>
+            <div class="badge-reco-desc">
+              <strong>Retry Candidate</strong>: Close to target accuracy but narrowly missed, and unplayed in the last 14 days. High probability for rating renewal.
+            </div>
+          </li>
+          <li class="badge-reco-item">
+            <span class="badge-reco badge-reco-clr">CLR</span>
+            <div class="badge-reco-desc">
+              <strong>Unplayed First Clear</strong>: Newly encountered pattern that has no record registered yet.
+            </div>
+          </li>
+        </ul>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 12px; margin-bottom: 0;">
+          💡 In the in-game overlay, hovering over any badge reveals a detailed tooltip explaining why the song was selected.
+        </p>
+      </div>
+
+      <h3>4) Bottom Footer & Recommended Difficulty Label</h3>
+      <p>
+        Anchors your optimal target difficulty and statistics in the footer regardless of cursor position on the song select screen.
+      </p>
+
+      <div class="hud-preview-widget">
+        <div class="hud-preview-left">
+          🎯 Rec. SC 13
+        </div>
+        <div class="hud-preview-right">
+          Avg 99.12% (14/20)
+        </div>
+      </div>
+      <ul>
+        <li><strong>Recommended Difficulty (Left)</strong>: Optimal difficulty derived from a TrueSkill-based statistical skill model (<code>SkillProfile</code>).</li>
+        <li><strong>Band Average Accuracy (Right)</strong>: Aggregates your average accuracy rate and completion ratio within that recommended tier.</li>
+      </ul>
+    </section>
+
+    <!-- Section 4: Custom Settings -->
+    <section id="custom-settings" class="guide-section">
+      <h2><span class="guide-toc-num">04</span> Settings & Customization (⚙)</h2>
+      <p>Clicking the <strong>gear icon (⚙)</strong> in the overlay header opens a settings dialog with 4 dedicated tabs.</p>
+
+      <div class="guide-cards-grid">
+        <div class="guide-card">
+          <div class="guide-card-title">⚙️ [General] Tab</div>
+          <ul>
+            <li><strong>Scale (S / M / L / XL)</strong>: 4 scaling tiers optimized for various resolutions (FHD, QHD, 4K).</li>
+            <li><strong>Opacity Slider</strong>: Adjust background transparency so it doesn't obstruct in-game sightlines.</li>
+            <li><strong>Corner Snap</strong>: Snap cleanly to any of the 4 corners (↖ Top-Left, ↗ Top-Right, ↙ Bottom-Left, ↘ Bottom-Right) or freely drag anywhere.</li>
+            <li><strong>Language (i18n)</strong>: Supports English, Korean, and Japanese.</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-title">🎯 [Recommendation] Tab</div>
+          <ul>
+            <li><strong>Mode</strong>: Choose between multidimensional <code>Smart</code> mode and simple rate-sorted <code>Classic</code> mode.</li>
+            <li><strong>Target Rate</strong>: Set your target accuracy baseline (<code>97%</code>, <code>99% (Default)</code>, <code>99.5%</code>, or <code>100%</code>).</li>
+            <li><strong>Exclude Unowned DLC</strong>: Automatically infers your owned DLCs from play history to prevent recommending unowned songs.</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-title">☁️ [V-Archive] Tab</div>
+          <ul>
+            <li><strong>V-Archive ID</strong>: Enter your nickname to sync your profile records automatically.</li>
+            <li><strong>account.txt Path</strong>: Specify your V-Archive client credentials file to enable live score uploads.</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-title">🔧 [Advanced] Tab</div>
+          <ul>
+            <li><strong>Capture Backend</strong>: Switch between default automatic mode, <code>GDI</code>, and high-speed <code>DXGI Desktop Duplication</code> at runtime.</li>
+            <li><strong>DisplayAffinity (Exclude from Capture)</strong>: Toggle whether the overlay is invisible in screenshots and streaming software (OBS).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout-tip" style="margin-top: 10px;">
+        <div class="callout-title">🪶 Lite Mode Overview</div>
+        An ultra-slim <strong>~60px height bar layout</strong> that hides extra lists and displays only vital real-time info.<br>
+        Both standard HUD and Lite Mode support 4-corner snapping and smooth mouse dragging.
+      </div>
+    </section>
+
+    <!-- Section 5: V-Archive Sync -->
+    <section id="varchive-sync" class="guide-section">
+      <h2><span class="guide-toc-num">05</span> V-Archive Sync & Sync Window Guide</h2>
+      <p>
+        Overmax requires no complex API tokens. Depending on your needs, you can use it for <strong>Score Lookup Only</strong> or <strong>Live & Batch Score Uploads</strong>.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
+        <!-- Case 1: Fetch Only -->
+        <div class="feature-item" style="border-left: 3px solid var(--accent-blue);">
+          <h3 style="margin-top: 0; color: var(--accent-blue); font-size: 1.05rem;">
+            📥 Case 1: Looking Up Scores & Tiers Only (Read-Only)
+          </h3>
+          <p style="font-size: 0.9rem; margin-bottom: 10px;">
+            Displays your existing V-Archive records and unofficial difficulties on the overlay for in-game reference.
+          </p>
+          <ol style="margin-bottom: 0;">
+            <li>Click the <strong>Settings icon (⚙)</strong> in the overlay header and navigate to the [V-Archive] tab.</li>
+            <li>Enter your <strong>V-Archive ID (nickname)</strong>.</li>
+            <li>Click <strong>[Refresh]</strong> to fetch your records immediately.</li>
+            <li>Overmax will automatically retrieve the latest records whenever the app starts.</li>
+          </ol>
+        </div>
+
+        <!-- Case 2: Fetch & Upload -->
+        <div class="feature-item" style="border-left: 3px solid var(--accent);">
+          <h3 style="margin-top: 0; color: var(--accent); font-size: 1.05rem;">
+            📤 Case 2: Uploading High Scores to V-Archive
+          </h3>
+          <p style="font-size: 0.9rem; margin-bottom: 10px;">
+            Allows submitting new records achieved during play directly to V-Archive.
+          </p>
+          <ol style="margin-bottom: 0;">
+            <li>Enter your <strong>V-Archive ID (nickname)</strong> in the Settings dialog (⚙).</li>
+            <li>Specify the path to your <strong><code>account.txt</code></strong> authentication file used by the official V-Archive client.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Sync Window In-depth Guide -->
+      <div style="margin-top: 28px;">
+        <h3 style="font-size: 1.15rem; color: var(--text); display: flex; align-items: center; gap: 8px;">
+          <span>🔄</span> Detailed Guide: V-Archive Sync Window
+        </h3>
+        <p>
+          Click the <strong>🔄 Sync button</strong> on the right side of the header to open this window. Review records accumulated in your local database (<code>record.db</code>), upload selected records, or delete unwanted entries.
+        </p>
+
+        <div class="guide-cards-grid" style="margin-top: 18px;">
+          <div class="guide-card">
+            <div class="guide-card-title">🔍 1. Account Check & Scan</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              Automatically detects the active Steam account (nickname & Steam ID) on your PC.
+            </p>
+            <ul>
+              <li><strong>[Scan] Button</strong>: Compares locally collected records against V-Archive data to find unregistered songs and improvement candidates.</li>
+              <li>Supports manual Steam ID switching for multi-account systems.</li>
+            </ul>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-title">🎛️ 2. Smart Filters (▼)</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              Click the <strong>▼ Filter</strong> button to narrow down candidate patterns quickly.
+            </p>
+            <ul>
+              <li><strong>Button Mode & Difficulty</strong>: Independent toggles for 4B/5B/6B/8B and NM/HD/MX/SC</li>
+              <li><strong>Level & Rate Dual Sliders</strong>: Filter by <code>Lv.1 ~ SC 15</code> and <code>0% ~ 100%</code></li>
+              <li><strong>Special Conditions</strong>: "Show only V-Archive missing MAX COMBO", "Exclude unregistered", etc.</li>
+            </ul>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-title">📊 3. Candidate Sorting</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              Sort discovered candidates (e.g. <code>12 / 45</code>) according to your preferences.
+            </p>
+            <ul>
+              <li><strong>Rate Diff</strong>: Sorts by accuracy improvement margin (e.g. <code>+0.45%</code>), placing high-impact rating boosters first.</li>
+              <li><strong>Title</strong>: Sorts alphabetically by button mode and song title.</li>
+            </ul>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-card-title">⚡ 4. Upload & Local Deletion</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 8px;">
+              Inspect each candidate's Rate, MAX COMBO status, and reason badge before taking action.
+            </p>
+            <ul>
+              <li><strong>[Upload]</strong>: Transmits the pattern record to V-Archive with immediate success/error status.</li>
+              <li><strong>[Delete]</strong>: Safely deletes misrecognized or unwanted records from the local database.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-tip" style="margin-top: 14px; margin-bottom: 0;">
+          <div class="callout-title">💡 Real-time Upload (⬆) vs Sync Window (🔄) Comparison</div>
+          <ul style="margin-bottom: 0; padding-left: 18px;">
+            <li><strong>Header ⬆ Button (Real-time)</strong>: Best for uploading a <strong>single pattern</strong> immediately after setting a new personal best during play. (Includes a 3-second toast feedback)</li>
+            <li><strong>Header 🔄 Button (Sync Window)</strong>: Best after completing a full session to <strong>review multiple accumulated records in bulk</strong>, filter selectively, or clean up local logs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: FAQ -->
+    <section id="faq" class="guide-section">
+      <h2><span class="guide-toc-num">06</span> Frequently Asked Questions (FAQ)</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. Screen recognition is not working at all.</div>
+        <div class="faq-a">
+          Make sure DJMAX RESPECT V is running and that the display mode is set to "Borderless" or "Windowed". Also verify that Overmax has standard user permissions and is not being blocked by conflicting graphics overlay software.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. The overlay doesn't appear or recognize songs on a dual/multi-monitor setup.</div>
+        <div class="faq-a">
+          Depending on virtual coordinate layouts in multi-monitor setups, DXGI capture may miss secondary screens.<br class="break-desktop">
+          Open <strong>Settings (⚙) → [Advanced] Tab</strong> and change the <strong>Capture Backend to "GDI"</strong> for universal compatibility across any display configuration.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. The overlay does not show up in screenshots or stream recording tools (OBS, etc.).</div>
+        <div class="faq-a">
+          To prevent the overlay window from recognizing its own visuals during screen capture, Windows DisplayAffinity (capture exclusion) is enabled by default.<br class="break-desktop">
+          To include the overlay in streams or recordings, go to <strong>Settings (⚙) → [Advanced] Tab → uncheck [Exclude from Screen Capture]</strong>.<br>
+          <span style="color: var(--accent);">⚠️ Caution</span>: When capture exclusion is disabled, ensure the overlay is moved away from the game UI recognition zones (e.g. to a secondary monitor or bottom corner) to avoid self-interference.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. Is there any risk of bans for memory modification or DLL injection?</div>
+        <div class="faq-a">
+          No. Overmax does not hook into, inject, or read the game process memory. It operates strictly by capturing window frames via standard Win32 APIs, ensuring complete safety.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. Is Linux supported?</div>
+        <div class="faq-a">
+          Yes. A dedicated package for x86_64 Linux (Proton / XWayland) is provided (<code>overmax-linux-x86_64.tar.gz</code>). Please refer to the Linux guide on GitHub for detailed setup steps.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../">Orphera Team</a>
+        <span>•</span>
+        <a href="./">About Overmax</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/overmax" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://v-archive.net" target="_blank" rel="noopener noreferrer">V-Archive</a>
+      </div>
+      <div class="footer-lang">
+        <span class="footer-lang-label">🌐 Language:</span>
+        <a href="../../overmax/guide.html">한국어</a>
+        <span>•</span>
+        <span class="active">English</span>
+        <span>•</span>
+        <a href="../../ja/overmax/guide.html">日本語</a>
+      </div>
+      <p>
+        Overmax is an open-source fan tool created by orphera. DJMAX RESPECT V is a trademark of NEOWIZ.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

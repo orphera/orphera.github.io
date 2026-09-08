@@ -41,7 +41,7 @@
   --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
   
   /* Fonts */
-  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, monospace;
   
   /* Container */
@@ -170,6 +170,45 @@ a {
 
 .nav-link:hover {
   color: var(--text);
+}
+
+/* Language Switcher */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+  font-size: 0.76rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.lang-switch a,
+.lang-switch .lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease, background 0.15s ease;
+  user-select: none;
+}
+
+.lang-switch a:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lang-switch .lang-btn.active {
+  color: #fff;
+  background: var(--accent-blue);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons */
@@ -1086,6 +1125,36 @@ a {
   color: var(--text);
 }
 
+.footer-lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+.footer-lang-label {
+  color: var(--text-muted);
+}
+
+.footer-lang a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-lang a:hover {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.footer-lang .active {
+  color: var(--text);
+  font-weight: 700;
+}
+
 /* Desktop line break helper (hidden on mobile to prevent excessive wraps) */
 .break-desktop {
   display: inline;
@@ -1362,5 +1431,16 @@ a {
   .header .btn {
     padding: 4px 8px;
     font-size: 0.76rem;
+  }
+
+  .lang-switch {
+    padding: 1px;
+    gap: 1px;
+    font-size: 0.7rem;
+  }
+
+  .lang-switch a,
+  .lang-switch .lang-btn {
+    padding: 2px 4px;
   }
 }
