@@ -98,6 +98,18 @@ html[lang="ja"] {
   overflow-wrap: anywhere;
 }
 
+/* Japanese display type: Pretendard carries no Japanese glyphs, so CJK falls back
+   to a system face whose advance is exactly 1em per character. A heading of N
+   glyphs therefore needs N x font-size <= column width; at 3rem the 18-glyph
+   hero title needs 864px inside an 812px column and wraps, orphaning the final
+   glyph onto its own line. Cap the size so the run fits on one line, and drop
+   the negative tracking that CJK does not want. Mobile keeps its own clamp. */
+:lang(ja) .hero-title,
+html[lang="ja"] .hero-title {
+  font-size: clamp(1.85rem, 4.4vw, 2.7rem);
+  letter-spacing: 0;
+}
+
 :lang(ja) body,
 :lang(ja) h1, :lang(ja) h2, :lang(ja) h3, :lang(ja) h4, :lang(ja) h5, :lang(ja) h6,
 :lang(ja) .hero-title, :lang(ja) .hero-desc,
@@ -440,6 +452,13 @@ a {
 .btn-lg {
   padding: 11px 20px;
   font-size: 0.98rem;
+}
+
+/* Compact header/nav button. Lives here as a class rather than an inline style so
+   the responsive overrides below can actually shrink it on narrow viewports. */
+.btn-compact {
+  padding: 5px 10px;
+  font-size: 0.82rem;
 }
 
 /* Hero */
@@ -1655,5 +1674,15 @@ a {
   .lang-dropdown-btn {
     padding: 3px 6px;
     font-size: 0.88rem;
+  }
+}
+
+/* Narrow phones: the brand, the remaining guide link and the language picker
+   already fill the row, so drop the header GitHub button (still reachable from
+   the footer and the hero) rather than letting the header push the whole page
+   into a sideways scroll. */
+@media (max-width: 400px) {
+  .header .btn-compact {
+    display: none;
   }
 }
