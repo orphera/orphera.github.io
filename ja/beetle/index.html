@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC3RG31MF3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RC3RG31MF3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beetle - 超軽量Rust製BMSプレイヤー</title>
+
+  <meta name="description" content="バイナリサイズの最小化と単一実行ファイルでの動作を最優先に設計した、Rust製のBMS(Be-Music Source)プレイヤーとパッケージマネージャーです。">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <!-- Open Graph / Discord / SNS -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orphera / Beetle">
+  <meta property="og:url" content="https://orphera.github.io/ja/beetle/">
+  <meta property="og:title" content="Beetle - 超軽量Rust製BMSプレイヤー">
+  <meta property="og:description" content="単一の実行ファイルで動作する超軽量Rust製BMSプレイヤー。オーディオクロック基準の判定、5/7/9/14鍵、パッケージマネージャーを提供。">
+  <meta property="og:image" content="https://orphera.github.io/favicon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beetle - 超軽量Rust製BMSプレイヤー">
+  <meta name="twitter:description" content="単一の実行ファイルで動作する超軽量Rust製BMSプレイヤー。オーディオクロック基準の判定、5/7/9/14鍵、パッケージマネージャーを提供。">
+  <meta name="twitter:image" content="https://orphera.github.io/favicon-512.png">
+
+  <!-- Alternate Language Links / SEO -->
+  <link rel="canonical" href="https://orphera.github.io/ja/beetle/">
+  <link rel="alternate" hreflang="ko" href="https://orphera.github.io/beetle/">
+  <link rel="alternate" hreflang="en" href="https://orphera.github.io/en/beetle/">
+  <link rel="alternate" hreflang="ja" href="https://orphera.github.io/ja/beetle/">
+  <link rel="alternate" hreflang="x-default" href="https://orphera.github.io/beetle/">
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="../" class="header-back">
+          ← Orphera
+        </a>
+        <span class="header-divider">|</span>
+        <a href="#" class="logo">
+          <span>Beetle</span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="#features" class="nav-link nav-link-desktop">機能</a>
+        <a href="#architecture" class="nav-link nav-link-desktop">設計</a>
+        <a href="#start" class="nav-link">はじめに</a>
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-compact">
+          GitHub ↗
+        </a>
+        <details class="lang-dropdown" aria-label="Language selector">
+          <summary class="lang-dropdown-btn" title="Language">
+            <span class="lang-globe">🌐</span>
+            <span class="lang-caret">▾</span>
+          </summary>
+          <div class="lang-dropdown-menu">
+            <a href="../../beetle/" class="lang-dropdown-item">
+              <span class="lang-flag">🇰🇷</span>
+              <span class="lang-name">한국어</span>
+            </a>
+            <a href="../../en/beetle/" class="lang-dropdown-item">
+              <span class="lang-flag">🇺🇸</span>
+              <span class="lang-name">English</span>
+            </a>
+            <a href="./" class="lang-dropdown-item active" aria-current="page">
+              <span class="lang-flag">🇯🇵</span>
+              <span class="lang-name">日本語</span>
+              <span class="lang-check">✓</span>
+            </a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">BMS · Be-Music Source</span>
+      <h1 class="hero-title">
+        超軽量Rust製BMSプレイヤー
+      </h1>
+      <p class="hero-desc">
+        バイナリサイズを最優先の指標とし、外部ランタイムのインストール不要の<strong>単一実行ファイル</strong>で動作するBMSプレイヤーです。<br class="break-desktop">オーディオハードウェアのクロックに基づく決定論的な判定と、ノンブロッキングUIを提供します。
+      </p>
+
+      <div class="hero-actions">
+        <a href="#start" class="btn btn-primary btn-lg">
+          ソースからビルド
+        </a>
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+          GitHub ↗
+        </a>
+      </div>
+      <div class="hero-meta">
+        Windows専用 • Direct3D 11 • 無料オープンソース • バイナリのリリースは準備中です
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">主な機能</h2>
+      <div class="features-list">
+
+        <div class="feature-item">
+          <div class="feature-icon">🪶</div>
+          <h3>超軽量な単一実行ファイル</h3>
+          <p>コーデックパック、C++ランタイムDLL、シェーダーコンパイラ、組み込みDBは不要で、.exe一つで動作します。プレイヤー本体はリリースビルドで約2.85 MBです。</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <h3>決定論的な判定</h3>
+          <p>判定とノーツ位置を、オーディオハードウェアが実際に再生したサンプル数から計算します。フレームレートの変動やラグがあっても判定誤差は蓄積しません。</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h3>ノンブロッキングUI</h3>
+          <p>ファイルI/Oとオーディオデコードはバックグラウンドスレッドが担当し、キー音はロード時にPCMへ事前デコードするため、プレイ中のデコードは一切ありません。</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎹</div>
+          <h3>幅広い譜面対応</h3>
+          <p>BMS / BME / BML / PMSに対応し、5鍵・7鍵・9鍵・14鍵(DP)を自動判別します。BPM変化、#STOP、ロングノーツ(LNOBJ/LNType1)を処理します。</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎛️</div>
+          <h3>プレイオプション</h3>
+          <p>Hi-Speed(0.5x~10.0x)、判定オフセット、レーンカバー、サドゥン、Mirror / Random / R-Random / S-Random、Groove · Survival · EX-Hard · Easyゲージに対応します。</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎬</div>
+          <h3>リプレイ &amp; 練習</h3>
+          <p>リプレイの録画/再生(.rep)、小節早送りの練習モード、オートプレイ、キーコンフィグUIを内蔵しています。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="section">
+    <div class="container">
+      <h2 class="section-title">設計原則</h2>
+      <div class="steps-list">
+
+        <div class="step-box">
+          <div class="step-num">01</div>
+          <h4>オーディオクロックがマスター</h4>
+          <p>判定とノーツ描画位置のどちらも、AudioClock(実際の再生サンプル数)を唯一の基準にします。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">02</div>
+          <h4>ロックフリー・ゼロアロケーションのオーディオスレッド</h4>
+          <p>オーディオコールバックはミューテックスやヒープ確保なしに、SPSCリングバッファ(rtrb)でコマンドを受け取ります。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">03</div>
+          <h4>Direct3D 11単一レンダラー</h4>
+          <p>OS標準のDirect3D 11を外部クレートなしで直接呼び出し、共有アトラスで画面の大部分を1回のドローコールで描画します。GPUがない場合はWARP(CPUラスタライザ)で同じパイプラインを実行します。</p>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 40px;">バイナリサイズ</h2>
+      <div class="steps-list">
+
+        <div class="step-box">
+          <div class="step-num">beetle-app.exe</div>
+          <h4>~2.85 MB</h4>
+          <p>BMSプレイヤー</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">bpm.exe</div>
+          <h4>~2.67 MB</h4>
+          <p>パッケージマネージャー CLI</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">bpm-gui.exe</div>
+          <h4>~4.60 MB</h4>
+          <p>パッケージマネージャー GUI</p>
+        </div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 12px;">opt-level="z"、LTO、panic="abort"、strip適用の単一静的バイナリです(2026-10-04測定)。組み込みのサブセットフォント(Noto Sans KR/JP、約1.5 MB)が、目標の1 MB未満を超える主な理由です。</p>
+    </div>
+  </section>
+
+  <!-- Package Manager -->
+  <section id="packages" class="section">
+    <div class="container">
+      <h2 class="section-title">パッケージマネージャー (bpm)</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 16px;">BMSフォルダを標準の<code>.bmsp</code>アーカイブにまとめてインストール・バージョン管理し、差分(<code>.bmdp</code>)パッチでアトミックに更新できます。CLI(<code>bpm</code>)とスタンドアロンGUI(<code>bpm-gui</code>)を提供します。</p>
+      <pre style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; overflow-x: auto;"><code>bpm import ./songs/my_song/
+bpm pack ./songs/my_song/ -o my_song-1.0.0.bmsp
+bpm install ./my_song-1.0.0.bmsp
+bpm update patch-1.1.0.bmdp
+bpm list</code></pre>
+    </div>
+  </section>
+
+  <!-- Get Started -->
+  <section id="start" class="section">
+    <div class="container">
+      <h2 class="section-title">はじめに</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 16px;">現在はGitHubリポジトリから自分でビルドしてお使いください。(Windows上のRustツールチェーンが必要です)</p>
+      <div class="steps-list">
+
+        <div class="step-box">
+          <div class="step-num">STEP 01</div>
+          <h4>ソースを取得</h4>
+          <p><code>git clone https://github.com/orphera/beetle</code> でソースを取得します。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 02</div>
+          <h4>リリースビルド</h4>
+          <p><code>cargo build --release</code> を実行すると、<code>target/release/</code> に実行ファイルが作られます。</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 03</div>
+          <h4>曲を登録して起動</h4>
+          <p><code>bpm import &lt;BMSフォルダ&gt;</code> で曲を登録し、<code>beetle-app.exe</code> を起動します。</p>
+        </div>
+      </div>
+
+      <div class="notice-box">
+        💡 <strong>基本操作</strong>: 選曲画面で <code>↑↓</code> 移動 · <code>Enter</code> 開始 · <code>Tab</code> プレイオプション · <code>F12</code> キーコンフィグ。7鍵の標準配置は <code>LShift</code>(スクラッチ) + <code>Z S X D C F V</code> です。
+      </div>
+
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          GitHubリポジトリ ↗
+        </a>
+        <a href="https://github.com/orphera/beetle/issues" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Issues / フィードバック ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../">Orphera Team</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <div class="footer-lang">
+        <span class="footer-lang-label">🌐 Language:</span>
+        <a href="../../beetle/">한국어</a>
+        <span>•</span>
+        <a href="../../en/beetle/">English</a>
+        <span>•</span>
+        <span class="active">日本語</span>
+      </div>
+      <p>
+        Beetle is an open-source BMS player created by orphera.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.lang-dropdown')) {
+        document.querySelectorAll('.lang-dropdown[open]').forEach(d => d.removeAttribute('open'));
+      }
+    });
+  </script>
+</body>
+</html>

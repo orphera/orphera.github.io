@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC3RG31MF3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RC3RG31MF3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beetle - Ultra-lightweight Rust BMS Player</title>
+
+  <meta name="description" content="A Rust-based BMS (Be-Music Source) player and package manager designed around minimal binary size and single-executable deployment.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <!-- Open Graph / Discord / SNS -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orphera / Beetle">
+  <meta property="og:url" content="https://orphera.github.io/en/beetle/">
+  <meta property="og:title" content="Beetle - Ultra-lightweight Rust BMS Player">
+  <meta property="og:description" content="An ultra-lightweight Rust BMS player shipped as a single executable. Audio-clock judgement, 5/7/9/14 keys, and a package manager.">
+  <meta property="og:image" content="https://orphera.github.io/favicon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beetle - Ultra-lightweight Rust BMS Player">
+  <meta name="twitter:description" content="An ultra-lightweight Rust BMS player shipped as a single executable. Audio-clock judgement, 5/7/9/14 keys, and a package manager.">
+  <meta name="twitter:image" content="https://orphera.github.io/favicon-512.png">
+
+  <!-- Alternate Language Links / SEO -->
+  <link rel="canonical" href="https://orphera.github.io/en/beetle/">
+  <link rel="alternate" hreflang="ko" href="https://orphera.github.io/beetle/">
+  <link rel="alternate" hreflang="en" href="https://orphera.github.io/en/beetle/">
+  <link rel="alternate" hreflang="ja" href="https://orphera.github.io/ja/beetle/">
+  <link rel="alternate" hreflang="x-default" href="https://orphera.github.io/beetle/">
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="../" class="header-back">
+          ← Orphera
+        </a>
+        <span class="header-divider">|</span>
+        <a href="#" class="logo">
+          <span>Beetle</span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="#features" class="nav-link nav-link-desktop">Features</a>
+        <a href="#architecture" class="nav-link nav-link-desktop">Design</a>
+        <a href="#start" class="nav-link">Get Started</a>
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-compact">
+          GitHub ↗
+        </a>
+        <details class="lang-dropdown" aria-label="Language selector">
+          <summary class="lang-dropdown-btn" title="Language">
+            <span class="lang-globe">🌐</span>
+            <span class="lang-caret">▾</span>
+          </summary>
+          <div class="lang-dropdown-menu">
+            <a href="../../beetle/" class="lang-dropdown-item">
+              <span class="lang-flag">🇰🇷</span>
+              <span class="lang-name">한국어</span>
+            </a>
+            <a href="./" class="lang-dropdown-item active" aria-current="page">
+              <span class="lang-flag">🇺🇸</span>
+              <span class="lang-name">English</span>
+              <span class="lang-check">✓</span>
+            </a>
+            <a href="../../ja/beetle/" class="lang-dropdown-item">
+              <span class="lang-flag">🇯🇵</span>
+              <span class="lang-name">日本語</span>
+            </a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">BMS · Be-Music Source</span>
+      <h1 class="hero-title">
+        Ultra-lightweight Rust BMS Player
+      </h1>
+      <p class="hero-desc">
+        A BMS player that treats binary size as the top metric and runs as a <strong>single executable</strong> with no external runtime to install.<br class="break-desktop">It offers deterministic judgement driven by the audio hardware clock and a non-blocking UI.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#start" class="btn btn-primary btn-lg">
+          Build from source
+        </a>
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+          GitHub ↗
+        </a>
+      </div>
+      <div class="hero-meta">
+        Windows only • Direct3D 11 • Free &amp; open source • Binary releases are coming soon
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">Key Features</h2>
+      <div class="features-list">
+
+        <div class="feature-item">
+          <div class="feature-icon">🪶</div>
+          <h3>Tiny single executable</h3>
+          <p>No codec packs, C++ runtime DLLs, shader compilers, or embedded databases. One .exe runs it; the player itself is about 2.85 MB in release builds.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <h3>Deterministic judgement</h3>
+          <p>Judgement and note positions are computed from the number of samples the audio hardware has actually played, so frame-rate drops and lag never accumulate timing error.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h3>Non-blocking UI</h3>
+          <p>File I/O and audio decoding run on background threads, and keysounds are pre-decoded to PCM at load time, so nothing is decoded at runtime during play.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎹</div>
+          <h3>Broad chart support</h3>
+          <p>Supports BMS / BME / BML / PMS and auto-detects 5, 7, 9, and 14-key (DP) charts. Handles BPM changes, #STOP, and long notes (LNOBJ/LNType1).</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎛️</div>
+          <h3>Play options</h3>
+          <p>Hi-Speed (0.5x–10.0x), judgement offset, lane cover, sudden, Mirror / Random / R-Random / S-Random, and Groove · Survival · EX-Hard · Easy gauges.</p>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🎬</div>
+          <h3>Replay &amp; practice</h3>
+          <p>Built-in replay recording/playback (.rep), a measure fast-forward practice mode, autoplay, and a key config UI.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section id="architecture" class="section">
+    <div class="container">
+      <h2 class="section-title">Design Principles</h2>
+      <div class="steps-list">
+
+        <div class="step-box">
+          <div class="step-num">01</div>
+          <h4>Audio clock as master</h4>
+          <p>Judgement and rendered note positions both use AudioClock (actual samples played) as the single source of truth.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">02</div>
+          <h4>Lock-free, zero-allocation audio thread</h4>
+          <p>The audio callback takes commands over an SPSC ring buffer (rtrb) with no mutexes and no heap allocation.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">03</div>
+          <h4>Single Direct3D 11 renderer</h4>
+          <p>Calls the OS-provided Direct3D 11 directly with no external crate, drawing most of the screen in one draw call from a shared atlas. Without a GPU it runs the same pipeline on WARP (the CPU rasterizer).</p>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 40px;">Binary Size</h2>
+      <div class="steps-list">
+
+        <div class="step-box">
+          <div class="step-num">beetle-app.exe</div>
+          <h4>~2.85 MB</h4>
+          <p>BMS player</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">bpm.exe</div>
+          <h4>~2.67 MB</h4>
+          <p>Package manager CLI</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">bpm-gui.exe</div>
+          <h4>~4.60 MB</h4>
+          <p>Package manager GUI</p>
+        </div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 12px;">Single static binaries built with opt-level="z", LTO, panic="abort", and strip (measured 2026-10-04). The embedded subset fonts (Noto Sans KR/JP, ~1.5 MB) are the main reason the build exceeds the under-1 MB goal.</p>
+    </div>
+  </section>
+
+  <!-- Package Manager -->
+  <section id="packages" class="section">
+    <div class="container">
+      <h2 class="section-title">Package Manager (bpm)</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 16px;">Bundle a BMS folder into a standard <code>.bmsp</code> archive, install and version it, and apply atomic updates with delta (<code>.bmdp</code>) patches. Available as a CLI (<code>bpm</code>) and a standalone GUI (<code>bpm-gui</code>).</p>
+      <pre style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; overflow-x: auto;"><code>bpm import ./songs/my_song/
+bpm pack ./songs/my_song/ -o my_song-1.0.0.bmsp
+bpm install ./my_song-1.0.0.bmsp
+bpm update patch-1.1.0.bmdp
+bpm list</code></pre>
+    </div>
+  </section>
+
+  <!-- Get Started -->
+  <section id="start" class="section">
+    <div class="container">
+      <h2 class="section-title">Get Started</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 16px;">For now, build it yourself from the GitHub repository. (Requires the Rust toolchain on Windows.)</p>
+      <div class="steps-list">
+
+        <div class="step-box">
+          <div class="step-num">STEP 01</div>
+          <h4>Get the source</h4>
+          <p>Run <code>git clone https://github.com/orphera/beetle</code>.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 02</div>
+          <h4>Release build</h4>
+          <p>Run <code>cargo build --release</code>; executables appear in <code>target/release/</code>.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num">STEP 03</div>
+          <h4>Add songs &amp; play</h4>
+          <p>Register songs with <code>bpm import &lt;BMS folder&gt;</code>, then launch <code>beetle-app.exe</code>.</p>
+        </div>
+      </div>
+
+      <div class="notice-box">
+        💡 <strong>Basic controls</strong>: in song select, <code>↑↓</code> to move, <code>Enter</code> to start, <code>Tab</code> for play options, <code>F12</code> for key config. The default 7-key layout is <code>LShift</code> (scratch) + <code>Z S X D C F V</code>.
+      </div>
+
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          GitHub Repository ↗
+        </a>
+        <a href="https://github.com/orphera/beetle/issues" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Issues / Feedback ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../">Orphera Team</a>
+        <span>•</span>
+        <a href="https://github.com/orphera/beetle" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <div class="footer-lang">
+        <span class="footer-lang-label">🌐 Language:</span>
+        <a href="../../beetle/">한국어</a>
+        <span>•</span>
+        <span class="active">English</span>
+        <span>•</span>
+        <a href="../../ja/beetle/">日本語</a>
+      </div>
+      <p>
+        Beetle is an open-source BMS player created by orphera.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.lang-dropdown')) {
+        document.querySelectorAll('.lang-dropdown[open]').forEach(d => d.removeAttribute('open'));
+      }
+    });
+  </script>
+</body>
+</html>
